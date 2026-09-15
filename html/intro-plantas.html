@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/intro-plantas.css">
+</head>
+<body>
+
+   <!-- Botón Volver al Menú Principal (Arriba a la izquierda) -->
+        <a href="menu.html" class="btn-home" title="Volver al Menú">
+             <span class="icon-home">🏠</span>
+             <span class="text-home">Menú</span>
+        </a>
+
+        <!-- Botón Audio / Silencio (Arriba a la derecha) -->
+            <button id="btn-audio" class="btn-audio" title="Activar/Desactivar sonido">
+              <img src="../img/Sonido.png" alt="Sonido Activo" class="img-audio-on">
+             <img src="../img/Sonido desactivado .png" alt="Sonido Silenciado" class="img-audio-off">
+            </button>
+
+    <!-- Header / Banner Madera Superior -->
+    <header class="header-plantas">
+        <img src="../img/introplantas/Las plantas.png" alt="Las plantas" class="banner-titulo">
+        <img src="../img/introplantas/Subtitulo - Plantas 1.png" alt="¡Exploramos y aprendemos!" class="banner-subtitulo">
+    </header>
+
+    <!-- Escena Principal -->
+    <main class="escena-plantas">
+        
+        <!-- Oso Interactivo -->
+        <div class="personaje-oso" id="btn-oso" style="cursor: pointer;" title="Tócame para escuchar">
+            <img src="../img/Explorador .png" alt="Oso Explorador" class="oso-img" id="oso-personaje">
+        </div>
+
+        <!-- Botones de Opciones de Plantas -->
+        <div class="opciones-plantas">
+            <a href="partes-planta.html" class="btn-opcion">
+                <img src="../img/introplantas/Partes de la planta - Sección .png" alt="Partes de la planta">
+            </a>
+
+            <a href="necesidades-planta.html" class="btn-opcion">
+                <img src="../img/introplantas/Qué necesitan para vivir - Sección.png" alt="Lo que necesita para vivir">
+            </a>
+
+            <a href="crecimiento-planta.html" class="btn-opcion">
+                <img src="../img/introplantas/Cómo crece una planta - Sección .png" alt="Cómo crece una planta">
+            </a>
+        </div>
+
+    </main>
+
+    <!-- Indicador Inferior -->
+    <footer class="footer-cta">
+        <img src="../img/introplantas/Toca para comenzar .png" alt="¡Toca una opción para comenzar!" class="cta-img">
+    </footer>
+
+    <!-- Audio de Explicación de las Plantas -->
+    <audio id="audio-intro-plantas" src="../audios/plantas/introplantas.mp3" preload="auto"></audio>
+
+    <script src="../js/intro-plantas.js" defer></script>
+</body>
+</html>

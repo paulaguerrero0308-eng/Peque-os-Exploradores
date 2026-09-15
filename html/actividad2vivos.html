@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/png" href="../img/Isotipo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/actividad2vivos.css">
+</head>
+<body>
+
+    <!-- Botón Volver -->
+    <a href="menu.html" class="btn-volver" title="Volver a la explicación">
+        🏠 Volver
+    </a>
+
+    <!-- Control de audio -->
+    <button class="btn-audio-top" id="btn-audio-instruccion" title="Control de audio">
+        <img src="../img/Sonido.png" alt="Audio activado" id="img-audio-on" class="icono-audio">
+        <img src="../img/Sonido desactivado .png" alt="Audio desactivado" id="img-audio-off" class="icono-audio oculta">
+    </button>
+
+    <!-- Banner Superior -->
+    <header class="header">
+        <img src="../img/actividad 2 seres vivos/A jugar .png" alt="¡A Jugar!" class="titulo-banner">
+        <img src="../img/actividad 2 seres vivos/Toca solo los seres vivos.png" alt="Toca solo los seres vivos" class="banner-subtitulo-img">
+    </header>
+
+    <!-- Escena Central -->
+    <main class="escena">
+        <div class="personaje" id="btn-oso" style="cursor: pointer;" title="Tócame para escuchar la instrucción">
+            <img src="../img/Explorador .png" alt="Oso Explorador" class="oso" id="oso-personaje">
+        </div>
+
+        <div class="grid-tarjetas" id="grid-tarjetas"></div>
+    </main>
+
+    <!-- BANCO DE AUDIOS EN HTML -->
+    <!-- Instrucción y Éxito final -->
+    <audio id="audio-instruccion" src="../audios/explicacionactividad2seresvivos.mp3" preload="auto"></audio>
+    <audio id="audio-exito" src="../audios/felicidadesactividad1.mp3" preload="auto"></audio>
+
+    <!-- Audios de Felicitación (Aciertos) -->
+    <audio class="audio-bien" src="../audios/Felicitaciónactividad2.mp3" preload="auto"></audio>
+    <audio class="audio-bien" src="../audios/felicitacion2.1.mp3" preload="auto"></audio>
+    <audio class="audio-bien" src="../audios/felicitacion2.2.mp3" preload="auto"></audio>
+
+    <!-- Audios de Error (Fallos) -->
+    <audio class="audio-mal" src="../audios/Actividad2mal .mp3" preload="auto"></audio>
+    <audio class="audio-mal" src="../audios/Actividad 2 mal .mp3" preload="auto"></audio>
+
+    <!-- Modal Emergente -->
+    <div class="modal-overlay" id="modal-mensaje">
+        <div class="modal-caja">
+            <h2 id="modal-titulo">¡Bien hecho explorador! 🎉</h2>
+            <p id="modal-texto">¡Has encontrado todos los seres vivos correctamente!</p>
+            <div class="modal-botones" id="modal-botones"></div>
+        </div>
+    </div>
+
+    <script src="../js/actividad2vivos.js"></script>
+</body>
+</html>

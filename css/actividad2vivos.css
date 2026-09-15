@@ -1,0 +1,244 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background: url("../img/Fondo\ del\ menú\ principal.png") no-repeat center center/cover;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+/* Botón Volver */
+.btn-volver {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background: #ffffff;
+    color: #5c3a21;
+    padding: 0.5rem 1.2rem;
+    border-radius: 2rem;
+    border: 3px solid #7fbf5b;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+/* Control de Audio */
+/* Control de Audio sin fondo ni borde */
+.btn-audio-top {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    box-shadow: none;
+    z-index: 100;
+}
+
+.icono-audio {
+    width: 45px;
+    height: 45px;
+    display: block;
+}
+
+.oculta {
+    display: none !important;
+}
+
+/* Header */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.titulo-banner {
+    height: 65px;
+    width: auto;
+}
+
+.banner-subtitulo-img {
+    height: 45px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Escena Central */
+.escena {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* Oso con tamaño incrementado */
+.personaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 260px;
+    flex-shrink: 0;
+    z-index: 1001; /* Queda por encima del fondo oscuro del modal */
+}
+
+.personaje .oso {
+    width: 240px;
+    height: auto;
+}
+
+/* Grid de Tarjetas */
+.grid-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 160px);
+    gap: 1rem;
+}
+
+.card-opcion {
+    position: relative;
+    background-color: #fcf8e8;
+    border: 3px solid #7cb342;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: visible;
+    transition: transform 0.2s ease;
+}
+
+.card-opcion:hover {
+    transform: scale(1.04);
+}
+
+.card-opcion .img-opcion {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.overlay-resultado {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 45px;
+    height: 45px;
+    display: none;
+    z-index: 10;
+}
+
+.overlay-resultado img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-opcion.marcada-correcta .overlay-resultado,
+.card-opcion.marcada-incorrecta .overlay-resultado {
+    display: block;
+}
+
+/* Modal Estilo UI */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 200px; /* Desplaza el cuadro a la derecha para dejar al oso visible al lado */
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-caja {
+    background: #ffffff;
+    border-radius: 35px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    max-width: 460px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.modal-caja h2 {
+    color: #4a3424;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+.modal-caja p {
+    color: #4a3424;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    margin-bottom: 1.8rem;
+    font-weight: 500;
+}
+
+.modal-botones {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn-continuar {
+    background: #ff9800;
+    color: #ffffff;
+    border: none;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 0.7rem 2.5rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.3);
+    font-family: 'Fredoka', sans-serif;
+    transition: transform 0.2s ease;
+}
+
+.btn-continuar:hover {
+    transform: scale(1.05);
+}
+
+.btn-menu {
+    background: #7fbf5b;
+    color: #ffffff;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.7rem 1.8rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-family: 'Fredoka', sans-serif;
+}

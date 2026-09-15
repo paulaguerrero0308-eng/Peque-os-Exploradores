@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body {
+    background: url('../img/Fondo\ del\ menú\ principal.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 20px;
+    overflow-x: hidden;
+}
+
+/* BOTONES SUPERIORES */
+.btn-volver {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    background-color: #ffffff;
+    color: #4a3525;
+    border: 3px solid #8bc34a;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn-audio-top {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-audio-top img {
+    width: 60px;
+    height: auto;
+}
+
+/* ENCABEZADO */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+    gap: 8px;
+}
+
+.titulo-banner {
+    max-width: 520px;
+    width: 75%;
+    height: auto;
+}
+
+.banner-subtitulo-img {
+    max-width: 480px;
+    width: 70%;
+    height: auto;
+}
+
+/* ESCENA DE JUEGO */
+.escena-juego {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1250px;
+    margin: 10px auto;
+    width: 100%;
+}
+
+/* El personaje se mantiene visible por encima del modal (z-index 1000) */
+.personaje {
+    position: relative;
+    z-index: 1001;
+}
+
+.oso {
+    width: 200px;
+    height: auto;
+}
+
+.zona-juego {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+}
+
+/* CASILLAS DESTINO */
+.casillas-contenedor {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.slot {
+    display: flex;
+    justify-content: center;
+}
+
+.drop-zone {
+    width: 100%;
+    height: 190px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.drop-zone.hovered {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+/* TARJETA AL ENTRAR A LA CASILLA NUMERADA */
+.drop-zone .card-etapa {
+    width: 78%;
+    height: 75%;
+    object-fit: contain;
+    position: relative;
+    margin-top: 42px; 
+    z-index: 2;
+}
+
+/* TARJETAS PARA ARRASTRAR (PANEL INFERIOR) */
+.tarjetas-origen {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    min-height: 160px;
+}
+
+.card-etapa {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    cursor: grab;
+    user-select: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.card-etapa:active {
+    cursor: grabbing;
+}
+
+/* FOOTER */
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.btn-comprobar {
+    background-color: #8bc34a;
+    color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 50px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-comprobar:hover {
+    background-color: #7cb342;
+    transform: scale(1.05);
+}
+
+/* MODAL DE MENSAJES */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-caja {
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 35px 30px;
+    max-width: 420px;
+    width: 85%;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal-caja h2 {
+    color: #4a3525;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.modal-caja p {
+    color: #4a3525;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.modal-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn-modal {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'Fredoka', sans-serif;
+    transition: transform 0.2s ease;
+}
+
+.btn-modal:hover {
+    transform: scale(1.05);
+}
+
+.btn-aceptar {
+    background-color: #ff9800;
+    color: #ffffff;
+}
+
+.btn-reiniciar {
+    background-color: #8bc34a;
+    color: #ffffff;
+}
+
+.btn-menu {
+    background-color: #4a90d9;
+    color: #ffffff;
+}
+/* CONTROL DE AUDIO Y VISIBILIDAD */
+.btn-audio-top .icono-audio.oculta {
+    display: none !important;
+}
+
+.btn-audio-top .icono-audio {
+    width: 60px;
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
+}
+
+/* EFECTO SELECCIÓN DE TARJETA (Para pantallas táctiles o clics) */
+.card-etapa.seleccionada {
+    transform: scale(1.15) !important;
+    filter: drop-shadow(0px 8px 15px rgba(255, 152, 0, 0.8)) !important;
+    outline: 4px dashed #ff9800;
+    border-radius: 15px;
+    z-index: 20;
+}
+
+.oso {
+    transition: transform 0.2s ease;
+}
+
+.personaje:hover .oso {
+    transform: scale(1.05);
+}

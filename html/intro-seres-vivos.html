@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <title>Pequeños Exploradores</title>
+    <!-- Ícono de la pestaña -->
+    <link rel="icon" type="image/png" href="../img/Isotipo.png">
+    
+    <link rel="stylesheet" href="../css/intro-seres-vivos.css?v=2">
+</head>
+<body>
+
+    <!-- Botón Volver al Menú -->
+    <a href="menu.html" class="btn-volver" title="Volver al Menú Principal">
+        🏠 Menú
+    </a>
+
+    <!-- Botón verde de Sonido de tu diseñadora -->
+    <button id="btn-audio-intro" class="btn-sonido-flotante">
+        <img src="../img/Sonido.png" alt="Escuchar sonido">
+    </button>
+
+    <!-- Header -->
+    <header class="header">
+        <img src="../img/Titulo-Pequeños exploradores.png" alt="Pequeños Exploradores" class="logo">
+    </header>
+
+    <!-- Escena Principal -->
+    <main class="intro">
+        <div class="intro__escena">
+            <!-- Oso interactivo con su ID -->
+            <img src="../img/Explorador .png" alt="Oso Explorador" class="intro__oso" id="oso-intro">
+            <img src="../img/holaexplorador.png" alt="Hola pequeño explorador" class="intro__globo">
+        </div>
+
+        <a href="ciclo-vida.html" class="btn-comenzar" id="btn-comenzar">
+             <img src="../img/comenzarseresvivos.png" alt="¡Comenzamos!">
+        </a>
+    </main>
+
+    <!-- Audios -->
+    <audio id="audio-intro" src="../audios/introseresvivos.mp3" preload="auto"></audio>
+
+    <!-- Enlace a tu archivo JS (Asegúrate de colocar la ruta correcta de tu archivo .js) -->
+    <script src="../js/intro-seres-vivos.js"></script>
+</body>
+</html>

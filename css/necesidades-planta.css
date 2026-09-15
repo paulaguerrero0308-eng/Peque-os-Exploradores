@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("../img/introplantas/Fondo\ de\ plantas\ .png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Botón Menú Superior Izquierda */
+.btn-menu-capsula {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    background-color: #ffffff;
+    border: 4px solid #7cb342;
+    border-radius: 40px;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 100;
+    transition: transform 0.2s ease;
+}
+
+.btn-menu-capsula:hover {
+    transform: scale(1.05);
+}
+
+.btn-menu-capsula .icon-home {
+    font-size: 2.6rem;
+}
+
+.btn-menu-capsula .texto-menu {
+    font-size: 2.4rem;
+    color: #4e2c0e;
+    font-weight: 700;
+}
+
+/* Header Banners */
+.header-juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5vh;
+    width: 100%;
+}
+
+.banner-titulo {
+    width: 520px;
+    max-width: 42vw;
+    height: auto;
+    object-fit: contain;
+}
+
+.banner-subtitulo {
+    width: 320px;
+    max-width: 28vw;
+    height: auto;
+    margin-top: 2px;
+    object-fit: contain;
+}
+
+/* Escena y Tarjetas */
+.escena-juego {
+    width: 100%;
+    max-width: 1350px;
+    height: 62vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personaje-oso {
+    position: absolute;
+    left: 1%;
+    bottom: -10px;
+}
+
+.oso-img {
+    width: 270px;
+    max-width: 20vw;
+    height: auto;
+}
+
+.contenedor-tarjetas {
+    position: absolute;
+    left: 53%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 11px;
+}
+
+.btn-tarjeta img {
+    width: 175px;
+    max-width: 14vw;
+    height: auto;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-tarjeta img:hover {
+    transform: translateY(-8px) scale(1.04);
+}
+
+/* Footer Banner Inferior */
+.footer-juego {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.5vh;
+}
+
+.banner-inferior-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-banner-inferior {
+    height: 68px;
+    max-height: 10vh;
+    width: auto;
+    object-fit: contain;
+}
+
+.btn-sonido {
+    position: absolute;
+    right: 37px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-sonido img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.btn-sonido img:hover {
+    transform: scale(1.1);
+}

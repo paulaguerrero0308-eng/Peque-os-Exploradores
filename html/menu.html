@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <title>Pequeños Exploradores</title>
+    <!-- Ícono de la pestaña -->
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    <!-- Sale de html/ y entra a css/ -->
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+
+    <!-- Botón de inicio de sesión -->
+    <a href="login.html" class="btn-profes" title="Iniciar Sesión / Registrarse">
+        👤 Iniciar Sesión / Registrarse
+    </a>
+
+    <!-- Header / Título Principal -->
+    <header class="header">
+        <img src="../img/Titulo-Pequeños exploradores.png" alt="Logo Pequeños Exploradores" class="logo">
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="menu">
+        <div class="menu__fila">
+
+            <!-- Mascota con el globo de texto -->
+            <div class="menu__mascota" id="btn-oso" style="cursor: pointer;" title="Tócame para escuchar de nuevo">
+                <img src="../img/Explorador .png" alt="Oso Explorador" class="menu__oso" id="oso-personaje">
+                <img src="../img/Globo .png" alt="¡Elige dónde quieres explorar hoy!" class="menu__globo oculto" id="globo-texto">
+            </div>
+
+            <!-- Opciones / Tarjetas navegables -->
+            <div class="menu__opciones">
+                
+                <!-- Tarjeta 1: Seres Vivos -->
+                <a href="intro-seres-vivos.html" class="menu__opcion" data-zona="seres-vivos">
+                    <img src="../img/Seres vivos - Botón .png" alt="Seres vivos">
+                </a>
+
+                <!-- Tarjeta 2: Plantas -->
+                <a href="intro-plantas.html" class="menu__opcion" data-zona="plantas">
+                    <img src="../img/Plantas - Botón.png" alt="Plantas">
+                </a>
+
+                <!-- Tarjeta 3: Animales -->
+                <a href="intro-animales.html" class="menu__opcion" data-zona="animales">
+                    <img src="../img/Animales - Botón .png" alt="Animales">
+                </a>
+            </div> <!-- Fin de menu__opciones -->
+
+        </div> <!-- Fin de menu__fila -->
+
+        <!-- Indicador Toca una zona -->
+        <img src="../img/Seleccionar.png" alt="Toca una zona para comenzar" class="menu__cta">
+    </main>
+
+    <!-- Audio de bienvenida del menú -->
+    <audio id="audio-bienvenida" src="../audios/eligedondemenu.mp3" preload="auto"></audio>
+
+    <!-- JS de apoyo -->
+    <script src="../js/menu.js" defer></script>
+</body>
+</html>
