@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/actividad-agua.css">
+</head>
+<body>
+
+    <!-- Botón Menú -->
+    <a href="intro-plantas.html" class="btn-menu-capsula" title="Volver al menú">
+        <span class="icono-casa">🏠</span>
+        <span class="texto-menu">Menú</span>
+    </a>
+
+    <!-- Botón Flecha Siguiente -->
+    <a href="intro-plantas.html" class="btn-flecha-siguiente oculto" id="btn-siguiente" title="Volver al menú">
+        <img src="../img/siguiente.png" alt="Siguiente">
+    </a>
+
+    <!-- Header Banners -->
+    <header class="header-juego">
+        <img src="../img/actividad 2 seres vivos/A jugar .png" alt="¡A jugar!" class="banner-titulo-juego" id="banner-a-jugar">
+        <img src="../img/actividadtierra/Excelente .png" alt="Excelente" class="banner-titulo-juego oculto" id="banner-excelente">
+    </header>
+
+    <!-- Subtítulo de instrucción -->
+    <div class="instruccion-capsula" id="capsula-instruccion">
+        <img src="../img/actividadagua/Arrastra la regadera .png" alt="Arrastra la regadera hasta la planta que necesita agua." class="img-instruccion">
+    </div>
+
+    <!-- Escena Principal -->
+    <main class="escena-juego">
+        
+        <!-- Nico + Globo -->
+        <div class="columna-nico">
+            <div class="contenedor-globo oculto" id="globo-nico">
+                <img src="../img/actividadagua/Globo Muy bien - El agua .png" alt="¡Muy bien, explorador!" class="img-globo-excelente">
+            </div>
+
+            <div class="personaje-oso">
+                <img src="../img/Explorador .png" alt="Oso Explorador" class="oso-img" id="oso-nico">
+            </div>
+        </div>
+
+        <!-- Tarjetas Centradas -->
+        <div class="contenedor-opciones" id="contenedor-opciones">
+            <div class="tarjeta-planta target-drop" data-es-correcta="true" id="drop-marchita">
+                <img src="../img/actividadagua/Planta sin agua - Agua.png" alt="Planta marchita" class="img-planta">
+            </div>
+
+            <div class="tarjeta-planta target-drop" data-es-correcta="false" id="drop-sana">
+                <img src="../img/actividadagua/Planta - Agua.png" alt="Planta sana" class="img-planta">
+            </div>
+        </div>
+
+        <!-- Estado Final: Planta Florecida -->
+        <div class="contenedor-planta-florecida oculto" id="contenedor-planta-florecida">
+            <img src="../img/actividadagua/Planta - Agua.png" alt="Planta florecida final" class="img-planta-florecida">
+        </div>
+
+        <!-- Regadera Arrastrable -->
+        <div class="contenedor-regadera" id="contenedor-regadera">
+            <img src="../img/actividadagua/Regadera.png" alt="Regadera" class="img-regadera" id="regadera-draggable" draggable="true">
+        </div>
+
+    </main>
+
+    <!-- Audios -->
+<audio id="audio-instruccion" src="../audios/plantas/arrastraregadera.mp3"></audio>
+<audio id="audio-correcto" src="../audios/plantas/ayudoalaplanta.mp3"></audio>
+<audio id="audio-incorrecto" src="../audios/plantas/intentadenuevo.mp3"></audio>
+<audio id="audio-nico-bien" src="../audios/plantas/nico-excelente.mp3"></audio>
+
+    <script src="../js/actividad-agua.js" defer></script>
+</body>
+</html>

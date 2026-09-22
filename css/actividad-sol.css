@@ -1,0 +1,241 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("../img/introplantas/Fondo\ de\ plantas\ .png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Botón Menú Cápsula (Arriba Izquierda) */
+.btn-menu-capsula {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    background-color: #ffffff;
+    border: 4px solid #7cb342;
+    border-radius: 40px;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    transition: transform 0.2s ease;
+}
+
+.btn-menu-capsula:hover {
+    transform: scale(1.05);
+}
+
+.btn-menu-capsula .icon-home {
+    font-size: 2.6rem;
+}
+
+.btn-menu-capsula .texto-menu {
+    font-size: 2.4rem;
+    color: #4e2c0e;
+    font-weight: 700;
+}
+
+/* Botón Flotante de Sonido */
+.btn-sonido-flotante {
+    position: absolute;
+    top: 20px;
+    left: 200px; /* Posicionado justo al lado del botón menú */
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    outline: none;
+    transition: transform 0.2s ease;
+}
+
+.btn-sonido-flotante:hover {
+    transform: scale(1.1);
+}
+
+.icono-audio {
+    width: 55px;
+    height: auto;
+    display: block;
+}
+
+/* Flecha Siguiente (Arriba Derecha) */
+.btn-flecha-siguiente {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    z-index: 100;
+}
+
+.btn-flecha-siguiente img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-flecha-siguiente img:hover {
+    transform: scale(1.08);
+}
+
+/* Header Banners */
+.header-juego {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.5vh;
+    z-index: 10;
+}
+
+.banner-titulo {
+    width: 460px;
+    max-width: 45vw;
+    height: auto;
+}
+
+.banner-instruccion {
+    width: 350px;
+    max-width: 32vw;
+    height: auto;
+    margin-top: 6px;
+}
+
+/* Escena Principal */
+.escena-juego {
+    width: 100%;
+    max-width: 1350px;
+    height: 75vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 0 40px 15px 40px;
+    position: relative;
+}
+
+/* Columna Oso Nico */
+.columna-nico {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    z-index: 15;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.contenedor-globo {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    z-index: 20;
+}
+
+/* 1. Globo inicial (burbuja blanca) */
+#globo-inicial {
+    position: absolute;
+    bottom: 5px;
+    left: 80px;
+    width: 220px !important;
+    max-width: none;
+    height: auto;
+    display: block;
+}
+
+/* 2. Texto de éxito ("¡Muy bien !") */
+#globo-exito {
+    position: absolute;
+    bottom: -30px;
+    left: 240px; /* Ubicado en la pared beige */
+    width: 150px !important;
+    max-width: none;
+    height: auto;
+    display: block;
+}
+
+.oso-img {
+    width: 250px;
+    height: auto;
+    display: block;
+}
+
+/* Zona Interactiva Drag & Drop */
+.zona-interactiva {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+/* Sol Arrastrable */
+.sol-container {
+    position: absolute;
+    left: 3%;
+    top: 3%;
+    cursor: grab;
+    z-index: 20;
+    transition: transform 0.2s ease;
+}
+
+.sol-container:active {
+    cursor: grabbing;
+}
+
+.img-sol {
+    width: 160px;
+    height: auto;
+    display: block;
+}
+
+/* Maceta */
+.maceta-dropzone {
+    width: 550px;
+    height: 330px;
+    margin-right: 240px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 10;
+}
+
+.img-planta {
+    width: 100%;
+    max-height: 330px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Clase para ocultar elementos */
+.oculta {
+    display: none !important;
+}
+/* Planta con Destello (Más grande y centrada en la maceta) */
+#planta-destello {
+    transform: scale(1.25); /* Ajusta este valor: 1.2 es 20% más grande, 1.3 es 30% más grande */
+    transform-origin: bottom center; /* Crece hacia arriba para no salirse de la maceta */
+    transition: transform 0.3s ease;
+}

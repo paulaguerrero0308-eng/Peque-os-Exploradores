@@ -1,0 +1,238 @@
+/*1. CONFIGURACIÓN GENERAL*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url('../img/introplantas/Fondo\ de\ plantas\ .png') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.oculto {
+    display: none !important;
+}
+
+/*2. NAVEGACIÓN Y HEADER*/
+.btn-menu-capsula {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #ffffff;
+    border: 3px solid #68d388;
+    border-radius: 30px;
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 10;
+    transition: transform 0.2s ease;
+}
+
+.btn-menu-capsula:hover {
+    transform: scale(1.05);
+}
+
+/* Flecha Siguiente con superposición y flotación */
+.btn-flecha-siguiente {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 102 !important; /* Pasa por encima del modal */
+    transition: transform 0.2s ease;
+    animation: flotarFlecha 1.2s infinite alternate ease-in-out;
+}
+
+.btn-flecha-siguiente img {
+    width: 85px;
+    height: auto;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.4));
+}
+
+.btn-flecha-siguiente:hover {
+    transform: scale(1.15);
+}
+
+@keyframes flotarFlecha {
+    0% {
+        transform: translateY(0px) scale(1);
+    }
+    100% {
+        transform: translateY(-8px) scale(1.08);
+    }
+}
+
+.header-juego {
+    margin-top: 15px;
+    z-index: 2;
+}
+
+.banner-titulo-juego {
+    max-width: 450px;
+    height: auto;
+}
+
+.instruccion-capsula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+    z-index: 2;
+}
+
+.img-instruccion {
+    max-width: 340px;
+    height: auto;
+}
+
+.img-sub-instruccion {
+    max-width: 280px;
+    height: auto;
+}
+
+/*3. ESCENA PRINCIPAL, NICO Y OPCIONES*/
+.escena-juego {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center !important;
+    align-items: flex-end;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.columna-nico {
+    position: absolute !important;
+    left: 40px !important;
+    bottom: 10px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 101 !important; /* Nico frente al modal */
+    width: 220px;
+}
+
+.contenedor-globo {
+    position: absolute;
+    top: -177px;
+    left: 50px;
+    z-index: 5;
+}
+
+.img-globo {
+    width: 185px;
+    height: auto;
+}
+
+.personaje-oso .oso-img {
+    width: 220px !important;
+    height: auto !important;
+}
+
+.contenedor-opciones {
+    display: flex;
+    gap: -10px;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    z-index: 2;
+}
+
+.tarjeta-opcion {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0;
+    width: 200px;
+    height: 190px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.tarjeta-opcion:hover {
+    transform: scale(1.08);
+}
+
+.img-opcion {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/*4. MODAL / RETROALIMENTACIÓN*/
+.modal-explicacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.contenido-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    animation: aparecerModal 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.img-letrero {
+    max-width: 550px;
+    width: 85vw;
+    height: auto;
+    filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.25));
+}
+
+.btn-volver-intentar {
+    background-color: #2d8ec9;
+    color: #ffffff;
+    border: 3px solid #1f6896;
+    border-radius: 15px;
+    padding: 12px 25px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-volver-intentar:hover {
+    background-color: #2475a7;
+    transform: scale(1.05);
+}
+
+@keyframes aparecerModal {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

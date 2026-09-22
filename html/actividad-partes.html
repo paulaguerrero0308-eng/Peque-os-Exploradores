@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/actividad-partes.css">
+</head>
+<body>
+
+    <!-- Botón Menú -->
+    <a href="intro-plantas.html" class="btn-home" title="Volver al menú">
+        <span class="icon-home">🏠</span>
+        <span class="text-home">Menú</span>
+    </a>
+
+    <!-- Header Banners -->
+    <header class="header-juego">
+        <img src="../img/Actividad plantas hojastallo/A jugar .png" alt="¡A jugar!" class="banner-titulo">
+        <img src="../img/Actividad plantas hojastallo/Arrastra.png" alt="Arrastra cada parte al lugar correcto." class="banner-subtitulo">
+    </header>
+
+    <!-- Escena del Juego -->
+    <main class="escena-juego">
+        
+        <!-- Personaje Nico -->
+        <div class="personaje-oso">
+            <img src="../img/Explorador .png" alt="Oso Explorador" class="oso-img">
+        </div>
+
+        <!-- Columna Izquierda: Piezas Arrastrables -->
+        <div class="columna-drag">
+            <div class="slot-drag">
+                <img src="../img/Actividad plantas hojastallo/Flor.png" class="draggable-item" draggable="true" id="drag-flor" data-parte="flor" alt="Flor">
+            </div>
+            <div class="slot-drag">
+                <img src="../img/Actividad plantas hojastallo/Hoja.png" class="draggable-item" draggable="true" id="drag-hoja" data-parte="hoja" alt="Hoja">
+            </div>
+            <div class="slot-drag">
+                <img src="../img/Actividad plantas hojastallo/Tallo.png" class="draggable-item" draggable="true" id="drag-tallo" data-parte="tallo" alt="Tallo">
+            </div>
+            <div class="slot-drag">
+                <img src="../img/Actividad plantas hojastallo/Raíz.png" class="draggable-item" draggable="true" id="drag-raiz" data-parte="raiz" alt="Raíz">
+            </div>
+        </div>
+
+        <!-- Planta Guía Central -->
+        <div class="contenedor-planta">
+            <img src="../img/explicacionplantas/Flor principal.png" alt="Planta con guías" class="planta-img">
+        </div>
+
+        <!-- Columna Derecha: Zonas Objetivo (Dropzones) con Sombras y Chulitos -->
+        <div class="columna-drop">
+            
+            <div class="fila-drop">
+                <div class="dropzone" data-target="flor">
+                    <img src="../img/Actividad plantas hojastallo/Flor - Arrastra.png" alt="Sombra Flor" class="img-sombra">
+                </div>
+                <div class="feedback-msg" id="feedback-flor">
+                    <span class="icon-check">✔</span>
+                </div>
+            </div>
+
+            <div class="fila-drop">
+                <div class="dropzone" data-target="hoja">
+                    <img src="../img/Actividad plantas hojastallo/Hoja - Arrastra.png" alt="Sombra Hoja" class="img-sombra">
+                </div>
+                <div class="feedback-msg" id="feedback-hoja">
+                    <span class="icon-check">✔</span>
+                </div>
+            </div>
+
+            <div class="fila-drop">
+                <div class="dropzone" data-target="tallo">
+                    <img src="../img/Actividad plantas hojastallo/Tallo - Arrastra.png" alt="Sombra Tallo" class="img-sombra">
+                </div>
+                <div class="feedback-msg" id="feedback-tallo">
+                    <span class="icon-check">✔</span>
+                </div>
+            </div>
+
+            <div class="fila-drop">
+                <div class="dropzone" data-target="raiz">
+                    <img src="../img/Actividad plantas hojastallo/Raíz - Arrastra.png" alt="Sombra Raíz" class="img-sombra">
+                </div>
+                <div class="feedback-msg" id="feedback-raiz">
+                    <span class="icon-check">✔</span>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Botón Siguiente (Oculto al inicio, aparece al ganar) -->
+    <a href="intro-plantas.html" class="btn-siguiente" id="btn-siguiente" style="display: none;">
+        <img src="../img/siguiente.png" alt="Siguiente">
+    </a>
+
+    <script src="../js/actividad-partes.js" defer></script>
+<!-- Elementos de Audio -->
+    <audio id="audio-instrucciones" src="../audios/plantas/arrastra.mp3"></audio>
+    <audio id="audio-bien" src="../audios/plantas/gennial explorador.mp3"></audio>
+    <audio id="audio-mal" src="../audios/plantas/intentadenuevo.mp3"></audio>
+</body>
+</html>

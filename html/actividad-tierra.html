@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/actividad-tierra.css">
+</head>
+<body>
+
+    <!-- Botón Menú Cápsula Blanca -->
+    <a href="intro-plantas.html" class="btn-menu-capsula" title="Volver al menú">
+        <span class="icono-casa">🏠</span>
+        <span class="texto-menu">Menú</span>
+    </a>
+
+    <!-- Botón Flecha Siguiente -->
+    <a href="intro-plantas.html" class="btn-flecha-siguiente oculto" id="btn-siguiente" title="Siguiente actividad">
+        <img src="../img/siguiente.png" alt="Siguiente">
+    </a>
+
+    <!-- Header Banner Principal -->
+    <header class="header-juego">
+        <img src="../img/actividad 2 seres vivos/A jugar .png" alt="¡A jugar!" class="banner-titulo-juego" id="banner-titulo">
+    </header>
+
+    <!-- Subtítulo / Pregunta Inicial -->
+    <div class="instruccion-capsula" id="capsula-instruccion">
+        <img src="../img/actividadtierra/¿En cuál maceta -.png" alt="¿En cuál maceta debe estar la planta?" class="img-instruccion" id="img-instruccion">
+    </div>
+
+    <!-- Imagen Explicación Final (Tu PNG) -->
+    <div class="instruccion-capsula oculto" id="capsula-explicacion">
+        <img src="../img/actividadtierra/Subtitulo - Tierra felicitación.png" alt="Explicación de la tierra" class="img-instruccion">
+    </div>
+
+    <!-- Escena Principal -->
+    <main class="escena-juego">
+        
+        <!-- Nico + Globo -->
+        <div class="columna-nico">
+            <div class="contenedor-globo oculto" id="globo-nico">
+                <img src="../img/actividadtierra/Globo felicitaciones - Tierra.png" alt="¡Muy bien, explorador!" class="img-globo-excelente">
+            </div>
+
+            <div class="personaje-oso">
+                <img src="../img/Explorador .png" alt="Oso Explorador" class="oso-img" id="oso-nico">
+            </div>
+        </div>
+
+        <!-- Planta Arrastrable -->
+        <div class="contenedor-planta-arrastrable" id="contenedor-planta">
+            <img src="../img/actividadtierra/Planta colocar .png" alt="Planta para colocar" class="img-planta-drag" id="planta-draggable" draggable="true">
+        </div>
+
+        <!-- Opciones de Macetas -->
+        <div class="contenedor-macetas" id="contenedor-macetas">
+            
+            <div class="opcion-maceta target-drop" data-es-correcta="false" id="drop-piedras">
+                <img src="../img/actividadtierra/Maceta con piedras.png" alt="Maceta con piedras" class="img-maceta">
+                <img src="../img/actividadtierra/Texto - Maceta con piedras .png" alt="Piedras" class="img-texto-maceta">
+            </div>
+
+            <div class="opcion-maceta target-drop" data-es-correcta="true" id="drop-tierra">
+                <img src="../img/actividadtierra/Maceta con tierra .png" alt="Maceta con tierra" class="img-maceta">
+                <img src="../img/actividadtierra/Texto - Maceta con tierra.png" alt="Tierra" class="img-texto-maceta">
+            </div>
+
+            <div class="opcion-maceta target-drop" data-es-correcta="false" id="drop-cemento">
+                <img src="../img/actividadtierra/Maceta con cemento .png" alt="Maceta con cemento" class="img-maceta">
+                <img src="../img/actividadtierra/Texto - Maceta con cemento .png" alt="Cemento" class="img-texto-maceta">
+            </div>
+
+        </div>
+
+        <!-- Estado Final: Planta Sembrada -->
+        <div class="contenedor-planta-sembrada oculto" id="contenedor-planta-sembrada">
+            <img src="../img/actividadtierra/Planta tierra felicitación .png" alt="Planta sembrada final" class="img-planta-sembrada">
+        </div>
+
+    </main>
+
+    <!-- Audios -->
+    <audio id="audio-instruccion" src="../audios/plantas/enqmaseta.mp3"></audio>
+    <audio id="audio-correcto" src="../audios/plantas/tierracorrecta.mp3"></audio>
+    <audio id="audio-incorrecto" src="../audios/plantas/intentadenuevo.mp3"></audio>
+    <audio id="audio-nico-bien" src="../audios/plantas/nico-excelente.mp3"></audio>
+
+    <script src="../js/actividad-tierra.js" defer></script>
+</body>
+</html>

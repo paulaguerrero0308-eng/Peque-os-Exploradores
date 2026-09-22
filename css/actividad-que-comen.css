@@ -1,0 +1,198 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url("../img/Fondo\ -\ Animales\ .png") no-repeat center center / cover;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0 25px 0;
+    position: relative;
+    user-select: none;
+}
+
+/* Botón Menú Verde Superior Izquierdo */
+.btn-menu-verde {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    border: 4px solid #73bf43;
+    padding: 6px 20px 6px 12px;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.btn-menu-verde span {
+    color: #4a2c11;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.btn-menu-verde:hover {
+    transform: scale(1.08);
+}
+
+/* Botón Sonido Superior Derecho */
+.btn-sonido-flotante {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.icono-audio {
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+}
+
+/* Header Banner */
+.header-banner {
+    z-index: 10;
+    margin-top: 5px;
+}
+
+.banner-titulo {
+    width: 420px;
+    height: auto;
+    filter: drop-shadow(0px 6px 10px rgba(0,0,0,0.25));
+}
+
+/* Escena Principal */
+.escena-actividad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Contenedor Animal */
+.contenedor-animal {
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animal-img {
+    max-height: 100%;
+    width: auto;
+    filter: drop-shadow(0px 8px 12px rgba(0,0,0,0.2));
+    transition: transform 0.3s ease;
+}
+
+/* Botones de Opciones */
+.contenedor-opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-opcion {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-opcion img {
+    width: 180px;
+    height: auto;
+    filter: drop-shadow(0px 6px 10px rgba(0,0,0,0.2));
+}
+
+.btn-opcion:hover {
+    transform: scale(1.08);
+}
+
+.btn-opcion:active {
+    transform: scale(0.95);
+}
+
+/* MODALES OVERLAY */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    backdrop-filter: blur(2px);
+}
+
+.modal-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.img-modal-mensaje {
+    width: 450px;
+    height: auto;
+    filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.3));
+}
+
+/* Piwi Gif exactamente posicionado al centro del aviso */
+.piwi-gif-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -42%);
+    width: 175px;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.btn-modal-accion {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: -30px;
+    z-index: 20;
+    position: relative;
+    transition: transform 0.2s ease;
+}
+
+.btn-modal-accion img {
+    width: 240px;
+    height: auto;
+    filter: drop-shadow(0px 6px 10px rgba(0,0,0,0.25));
+}
+
+.btn-modal-accion:hover {
+    transform: scale(1.08);
+}
+
+.oculto {
+    display: none !important;
+}

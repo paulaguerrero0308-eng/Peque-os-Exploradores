@@ -1,0 +1,171 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Mantiene la pantalla fija sin barras de desplazamiento */
+    
+    /* Sale de css/ con ../ para entrar a img/ */
+    background-image: url("../img/Fondo del login .png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    font-size: 1.6rem;
+    font-family: "Fredoka", sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+/* Header / Logo Pequeños Exploradores */
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.logo {
+    width: 500px;            /* Tamaño controlado para que no tape el formulario */
+    max-width: 60vw;
+    max-height: 22vh;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.15));
+}
+
+/* Contenedor principal del Login */
+.login {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    flex-grow: 1;
+}
+
+/* Osito animado al lado del formulario */
+#oso {
+    position: absolute;
+    right: 88%;              /* Ajustado para quedar asomado al lado izquierdo */
+    bottom: -10px;   
+    width: 320px;            /* Tamaño proporcional */
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Recuadro del formulario con fondo de pergamino/tabla */
+.login__content {
+    width: 520px;
+    max-width: 85vw;
+    min-height: 380px;
+
+    /* Sale de css/ con ../ para entrar a img/ */
+    background-image: url("../img/Login si nada .png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+
+    padding: 3.5rem 4rem 3rem 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+}
+
+.login__title {
+    text-align: center;
+    color: #5c3a21;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.form__field {
+    margin-bottom: 1.2rem;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: .4rem;
+    color: #5a3d22;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.form__input {
+    width: 100%;
+    padding: 0.9rem 1.4rem;
+    border-radius: 2rem;
+    border: 3px solid #7fbf5b;
+    font-size: 1.5rem;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.form__input:focus {
+    border-color: #5d983d;
+    box-shadow: 0 0 8px rgba(127, 191, 91, 0.4);
+}
+
+.form__button {
+    margin-top: 0.8rem;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 2.5rem;
+    background: #7fbf5b;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: "Fredoka", sans-serif;
+    cursor: pointer;
+    box-shadow: 0 4px 0px #5a8a3c;
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.form__button:hover {
+    background: #72ad51;
+}
+
+.login__links {
+    margin-top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+.login__links a {
+    text-decoration: none;
+    color: #4a90e2;
+    font-size: 1.3rem;
+}
+
+.login__links a:hover {
+    text-decoration: underline;
+}
+
+.login__links .link-volver {
+    color: #5c3a21;
+    font-weight: bold;
+    margin-top: 0.3rem;
+}

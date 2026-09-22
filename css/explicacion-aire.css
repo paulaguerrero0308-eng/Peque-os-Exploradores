@@ -1,0 +1,194 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url("../img/introplantas/Fondo\ de\ plantas\ .png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Botón Menú Cápsula */
+.btn-menu-capsula {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    background-color: #ffffff;
+    border: 4px solid #7cb342;
+    border-radius: 40px;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    transition: transform 0.2s ease;
+}
+
+.btn-menu-capsula:hover {
+    transform: scale(1.05);
+}
+
+.btn-menu-capsula .icon-home {
+    font-size: 2.6rem;
+}
+
+.btn-menu-capsula .texto-menu {
+    font-size: 2.4rem;
+    color: #4e2c0e;
+    font-weight: 700;
+}
+
+/* Botón Flecha Siguiente */
+.btn-flecha-siguiente {
+    position: absolute !important;
+    top: 20px !important;
+    right: 25px !important;
+    z-index: 100;
+}
+
+.btn-flecha-siguiente img {
+    width: 110px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-flecha-siguiente img:hover {
+    transform: scale(1.08);
+}
+
+/* Header Banner PNG */
+.header-juego {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    z-index: 10;
+}
+
+.banner-titulo-aire {
+    width: 380px;
+    max-width: 35vw;
+    height: auto;
+}
+
+/* Escena Principal */
+.escena-juego {
+    width: 100%;
+    max-width: 1300px;
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    margin-top: -2vh;
+}
+
+/* Columna Nico y Globo */
+.columna-nico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 290px;
+    z-index: 5;
+}
+
+.contenedor-globo {
+    position: relative;
+    width: 200px;
+    margin-bottom: -5px;
+}
+
+.img-globo-aire {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn-sonido-globo {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.btn-sonido-globo img {
+    width: 40px;
+    height: auto;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.btn-sonido-globo img:hover {
+    transform: scale(1.1);
+}
+
+.oculto {
+    display: none !important;
+}
+
+.personaje-oso {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.oso-img {
+    width: 220px;
+    height: auto;
+}
+
+/* Marco del Video */
+.contenedor-marco-video {
+    position: relative;
+    width: 700px;
+    max-width: 54vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.img-marco-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wrapper-iframe {
+    position: absolute;
+    top: 6%;
+    left: 4.5%;
+    width: 91%;
+    height: 88%;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.video-youtube {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

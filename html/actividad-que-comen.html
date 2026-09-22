@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/actividad-que-comen.css">
+</head>
+<body>
+
+    <!-- Botón Menú Verde Superior Izquierdo -->
+    <a href="intro-animales.html" class="btn-menu-verde" title="Volver al Menú">
+        <span>🏠 Menú</span>
+    </a>
+
+    <!-- Botón de Sonido Flotante Superior Derecho -->
+    <button id="btn-audio-top" class="btn-sonido-flotante" title="Controlar audio">
+        <img src="../img/Sonido.png" alt="Sonido activado" id="img-audio-on" class="icono-audio">
+        <img src="../img/Sonido desactivado .png" alt="Sonido desactivado" id="img-audio-off" class="icono-audio oculto">
+    </button>
+
+    <!-- Header Título Pregunta -->
+    <header class="header-banner">
+        <img src="../img/actividadcomida/¿Que tipo de alimentacion tiene - -Titulo .png" alt="¿Qué tipo de alimentación tiene?" class="banner-titulo">
+    </header>
+
+    <!-- Escena Principal -->
+    <main class="escena-actividad">
+        
+        <!-- Imagen del Animal Actual -->
+        <div class="contenedor-animal">
+            <img src="../img/saltan/Conejo - grande .png" alt="Animal" id="img-animal" class="animal-img">
+        </div>
+
+        <!-- Tarjetas de Opciones -->
+        <div class="contenedor-opciones" id="contenedor-opciones">
+            <button class="btn-opcion" data-tipo="herbivoro">
+                <img src="../img/actividadcomida/Herbívoro - Tarjeta .png" alt="Herbívoro">
+            </button>
+
+            <button class="btn-opcion" data-tipo="carnivoro">
+                <img src="../img/actividadcomida/Carnivoros - Tarjeta .png" alt="Carnívoro">
+            </button>
+
+            <button class="btn-opcion" data-tipo="omnivoro">
+                <img src="../img/actividadcomida/Omnivoro - Tarjeta .png" alt="Omnívoro">
+            </button>
+        </div>
+
+    </main>
+
+    <!-- MODAL DE ÉXITO (¡Muy bien!) -->
+    <div id="modal-correcto" class="modal-overlay oculto">
+        <div class="modal-contenido">
+            <img src="../img/actividadcomida/Excelente - cuadro .png" alt="¡Muy bien!" class="img-modal-mensaje">
+            <img src="../gif/Pajarito oficial lento.gif" alt="Piwi hablando" id="piwi-modal-correcto" class="piwi-gif-modal">
+            <button id="btn-siguiente" class="btn-modal-accion">
+                <img src="../img/actividadcomida/Siguiente .png" alt="Siguiente">
+            </button>
+        </div>
+    </div>
+
+    <!-- MODAL DE ERROR (¡Casi!) -->
+    <div id="modal-incorrecto" class="modal-overlay oculto">
+        <div class="modal-contenido">
+            <img src="../img/actividadcomida/Casi - cuadro .png" alt="¡Casi!" class="img-modal-mensaje">
+            <img src="../gif/Pajarito oficial lento.gif" alt="Piwi hablando" id="piwi-modal-incorrecto" class="piwi-gif-modal">
+            <button id="btn-reintentar" class="btn-modal-accion">
+                <img src="../img/actividadcomida/Intentar de nuevo .png" alt="Inténtalo de nuevo">
+            </button>
+        </div>
+    </div>
+
+    <!-- AUDIOS Y EFECTOS -->
+    <audio id="audio-pregunta" src="../audios/animales/que_tipo_de_alimentacion.mp3"></audio>
+    <audio id="audio-correcto" src="../audios/efectos/correcto.mp3"></audio>
+    <audio id="audio-incorrecto" src="../audios/efectos/incorrecto.mp3"></audio>
+
+    <script src="../js/actividad-que-comen.js" defer></script>
+</body>
+</html>

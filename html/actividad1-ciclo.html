@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="stylesheet" href="../css/actividad1-ciclo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- BOTONES SUPERIORES FIJOS -->
+    <a href="menu.html" class="btn-volver">🏠 Volver</a>
+    
+    <!-- Botón de sonido con ambas imágenes -->
+    <button class="btn-audio-top" id="btn-audio-instruccion" title="Control de audio">
+        <img src="../img/Sonido.png" alt="Audio activado" id="img-audio-on" class="icono-audio">
+        <img src="../img/Sonido desactivado .png" alt="Audio desactivado" id="img-audio-off" class="icono-audio oculta">
+    </button>
+
+    <!-- ENCABEZADO CON BANNER Y SUBTÍTULO -->
+    <header class="header">
+        <img src="../img/actividad 1 seres vivos/Ordenemos el ciclo de vida.png" alt="¡Ordenemos el ciclo de vida!" class="titulo-banner">
+        <img src="../img/actividad 1 seres vivos/Arrastra cada etapa.png" alt="Arrastra cada etapa y colócala en el orden correcto." class="banner-subtitulo-img">
+    </header>
+
+    <!-- ESCENA PRINCIPAL DE JUEGO -->
+    <main class="escena-juego">
+        
+        <!-- PERSONAJE OSO INTERACTIVO -->
+        <div class="personaje" id="btn-oso" style="cursor: pointer;" title="Tócame para escuchar las instrucciones">
+            <img src="../img/Explorador .png" alt="Oso explorador" class="oso" id="oso-personaje">
+        </div>
+
+        <!-- ÁREA DE TRABAJO -->
+        <div class="zona-juego">
+            
+            <!-- CASILLAS DESTINO CON NÚMEROS -->
+            <div class="casillas-contenedor">
+                <div class="slot" data-step="1">
+                    <div class="drop-zone" id="drop-1" data-orden="1" style="background-image: url('../img/actividad 1 seres vivos/Coloca 1.png');"></div>
+                </div>
+                <div class="slot" data-step="2">
+                    <div class="drop-zone" id="drop-2" data-orden="2" style="background-image: url('../img/actividad 1 seres vivos/Colocar 2.png');"></div>
+                </div>
+                <div class="slot" data-step="3">
+                    <div class="drop-zone" id="drop-3" data-orden="3" style="background-image: url('../img/actividad 1 seres vivos/Colocar 3.png');"></div>
+                </div>
+                <div class="slot" data-step="4">
+                    <div class="drop-zone" id="drop-4" data-orden="4" style="background-image: url('../img/actividad 1 seres vivos/Colocar 4 .png');"></div>
+                </div>
+                <div class="slot" data-step="5">
+                    <div class="drop-zone" id="drop-5" data-orden="5" style="background-image: url('../img/actividad 1 seres vivos/Colocar 5.png');"></div>
+                </div>
+            </div>
+
+            <!-- TARJETAS PARA ARRASTRAR -->
+            <div class="tarjetas-origen" id="origen-tarjetas">
+                <img src="../img/actividad 1 seres vivos/Se alimentan - Arrastra .png" class="card-etapa" draggable="true" id="card-3" data-etapa="3" alt="Se alimentan">
+                <img src="../img/actividad 1 seres vivos/Se reproducen - Arrastra.png" class="card-etapa" draggable="true" id="card-4" data-etapa="4" alt="Se reproducen">
+                <img src="../img/actividad 1 seres vivos/Mueren - Arrastra  .png" class="card-etapa" draggable="true" id="card-5" data-etapa="5" alt="Mueren">
+                <img src="../img/actividad 1 seres vivos/Nacen -  Arrastra .png" class="card-etapa" draggable="true" id="card-1" data-etapa="1" alt="Nacen">
+                <img src="../img/actividad 1 seres vivos/Crece - Arrastra.png" class="card-etapa" draggable="true" id="card-2" data-etapa="2" alt="Crecen">
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER BOTÓN COMPROBAR -->
+    <footer class="footer">
+        <button class="btn-comprobar" id="btn-comprobar">¡Comprobar!</button>
+    </footer>
+
+    <!-- AUDIOS -->
+    <audio id="audio-pop" src="../audios/popseresvivos2.mp3" preload="auto"></audio>
+    <audio id="audio-instruccion" src="../audios/explicaactividad1.mp3" preload="auto"></audio>
+    <audio id="audio-error" src="../audios/malactividad1.mp3" preload="auto"></audio>
+    <audio id="audio-exito" src="../audios/felicidadesactividad1.mp3" preload="auto"></audio>
+    <audio id="audio-incompleto" src="../audios/comprueba las casillas.mp3" preload="auto"></audio>
+
+    <!-- MODAL DE MENSAJES -->
+    <div class="modal-overlay" id="modal-mensaje">
+        <div class="modal-caja">
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-texto"></p>
+            <div class="modal-botones" id="modal-botones"></div>
+        </div>
+    </div>
+
+    <script src="../js/actividad1-ciclo.js"></script>
+</body>
+</html>

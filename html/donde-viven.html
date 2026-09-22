@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peque<script src="../js/donde-viven_.js" defer></script>ños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/donde-viven.css">
+</head>
+<body>
+
+    <!-- Botón Menú Verde Superior Izquierdo -->
+    <a href="intro-animales.html" class="btn-menu-verde" title="Volver al Menú">
+        <span>🏠 Menú</span>
+    </a>
+
+    <!-- Botón Sonido Superior Derecho -->
+    <button id="btn-audio-top" class="btn-sonido-flotante" title="Controlar audio">
+        <img src="../img/Sonido.png" alt="Sonido activado" id="img-audio-on" class="icono-audio">
+        <img src="../img/Sonido desactivado .png" alt="Sonido desactivado" id="img-audio-off" class="icono-audio oculto">
+    </button>
+
+    <!-- Header Título Banner -->
+    <header class="header-banner">
+        <img src="../img/dondevivenexplicacion/Donde viven - Titulo .png" alt="¿Dónde viven?" class="banner-titulo">
+        <div class="subtitulo-caja">
+            <img src="../img/dondevivenexplicacion/Los animales...png" alt="Los animales viven en diferentes lugares llamados hábitats." class="subtitulo-img">
+        </div>
+    </header>
+
+    <!-- Escena Principal -->
+    <main class="escena-donde-viven">
+
+        <!-- Contenedor de las 3 Tarjetas Flip -->
+        <div class="tarjetas-container">
+            
+            <!-- Tarjeta 1: Bosque -->
+            <div class="tarjeta-flip">
+                <div class="tarjeta-inner">
+                    <div class="tarjeta-frente">
+                        <img src="../img/dondevivenexplicacion/Tarjeta -Bosque .png" alt="Bosque Frente">
+                    </div>
+                    <div class="tarjeta-reverso">
+                        <img src="../img/dondevivenexplicacion/Bosque -detras.png" alt="Bosque Detrás">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Agua -->
+            <div class="tarjeta-flip">
+                <div class="tarjeta-inner">
+                    <div class="tarjeta-frente">
+                        <img src="../img/dondevivenexplicacion/Tarjeta - agua .png" alt="Agua Frente">
+                    </div>
+                    <div class="tarjeta-reverso">
+                        <img src="../img/dondevivenexplicacion/Agua -detras .png" alt="Agua Detrás">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Campo -->
+            <div class="tarjeta-flip">
+                <div class="tarjeta-inner">
+                    <div class="tarjeta-frente">
+                        <img src="../img/dondevivenexplicacion/Tarjeta -Campo .png" alt="Campo Frente">
+                    </div>
+                    <div class="tarjeta-reverso">
+                        <img src="../img/dondevivenexplicacion/Campo -detras.png" alt="Campo Detrás">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Personaje Piwi / Nico -->
+        <div class="contenedor-piwi">
+            <img src="../gif/Pajarito oficial lento.gif" alt="Piwi Narrador" id="piwi-narrador" class="piwi-img">
+        </div>
+
+    </main>
+
+    <!-- Botón Continuar Inferior -->
+    <footer class="footer-accion">
+        <a href="actividad-donde-viven.html" class="btn-continuar">
+            <span>Continuar</span> ➡️
+        </a>
+    </footer>
+
+    <!-- AUDIO NARRACIÓN -->
+    <audio id="audio-explicacion" src="../audios/animales/donde_viven_explicacion.mp3"></audio>
+
+    <script src="../js/donde-viven.js" defer></script>
+</body>
+</html>

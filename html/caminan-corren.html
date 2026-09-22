@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/caminan-corren.css">
+</head>
+<body>
+
+    <!-- Botón Volver al Menú Anterior -->
+    <a href="como-se-mueven.html" class="btn-menu-verde" title="Volver a ¿Cómo se mueven?">
+        <span>🏠 Menú</span>
+    </a>
+
+    <!-- Botón de Sonido Flotante Transparente (Esquina Superior Derecha) -->
+    <button id="btn-audio-top" class="btn-sonido-flotante" title="Controlar audio">
+        <img src="../img/Sonido.png" alt="Sonido activado" id="img-audio-on" class="icono-audio">
+        <img src="../img/Sonido desactivado .png" alt="Sonido desactivado" id="img-audio-off" class="icono-audio oculto">
+    </button>
+
+    <!-- Header / Título Banner Madera -->
+    <header class="header-banner">
+        <img src="../img/caminanycorren/Caminan y corren - titulo .png" alt="Caminan y corren" class="banner-titulo">
+    </header>
+
+    <!-- Pájaro Piwi Flotante -->
+    <img src="../img/piwi.png" alt="Piwi" id="piwi-pajaro" class="piwi-img">
+
+    <!-- Escena Principal -->
+    <main class="escena-explicacion">
+
+        <!-- Contenedor Central: Imagen Grande del Animal y Cuadro Explicativo -->
+        <div class="contenedor-principal">
+            
+            <!-- Imagen Grande Principal -->
+            <div class="area-animal-grande">
+                <img src="../img/caminanycorren/Cachorrog .png" alt="Animal que camina o corre" id="animal-grande">
+            </div>
+
+            <!-- Cuadro Informativo / Explicación -->
+            <div class="cuadro-explicacion">
+                <img src="../img/caminanycorren/Explicación - caminan y corren .png" alt="Algunos animales caminan o corren usando sus patas..." class="img-explicacion">
+            </div>
+
+        </div>
+
+        <!-- Barra Inferior de Miniaturas de Animales -->
+        <nav class="barra-animales-mini">
+
+            <!-- Cachorro -->
+            <button class="btn-mini activo" data-img="../img/caminanycorren/Cachorrog .png">
+                <img src="../img/caminanycorren/Cachorro - pq.png" alt="Cachorro">
+            </button>
+
+            <!-- Caballo -->
+            <button class="btn-mini" data-img="../img/caminanycorren/Caballo - grande .png">
+                <img src="../img/caminanycorren/Caballo - pq.png" alt="Caballo">
+            </button>
+
+            <!-- Elefante -->
+            <button class="btn-mini" data-img="../img/caminanycorren/Elefante - grande .png">
+                <img src="../img/caminanycorren/Elefante -pq.png" alt="Elefante">
+            </button>
+
+            <!-- Gato -->
+            <button class="btn-mini" data-img="../img/caminanycorren/Gato - grande .png">
+                <img src="../img/caminanycorren/Gato -pq.png" alt="Gato">
+            </button>
+
+        </nav>
+
+    </main>
+
+    <!-- BANCO DE AUDIOS -->
+    <audio id="audio-piwi" src="../audios/animales/caminancorren.mp3"></audio>
+
+    <script src="../js/caminan-corren.js" defer></script>
+</body>
+</html>
