@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
             nombre: "Agua",
             fondo: "../img/actividaddondeviven/Nadan - fondo .png",
             animales: [
-                { src: "../img/nadan/Delfin - grande .png", esIntruso: false, width: "130px" },
+                { src: "../IMG/nadan/Delfin - grande .png", esIntruso: false, width: "130px" },
                 { src: "../img/nadan/Tortuga -Grande .png", esIntruso: false, width: "120px" },
                 { src: "../img/nadan/Ballena - grande .png", esIntruso: false, width: "150px" },
                 { src: "../img/saltan/Grillo - grande .png", esIntruso: true, width: "90px" }
