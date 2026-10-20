@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/crecimiento-planta.css">
+</head>
+<body>
+
+    <!-- Botón Menú Estilizado Verde -->
+    <a href="intro-plantas.html" class="btn-menu-verde" title="Volver al menú">
+        <span>🏠Menú</span>
+    </a>
+
+    <!-- Botón Flecha Siguiente -->
+    <a href="actividad-ciclo.html" class="btn-flecha-madera" title="Ir a la actividad">
+        <img src="../img/siguiente.png" alt="Siguiente actividad">
+    </a>
+
+    <!-- Banner Superior -->
+    <header class="header-banner">
+        <img src="../img/como crece una planta/Ciclo de vida de una planta.png" alt="Ciclo de las plantas" class="banner-titulo">
+    </header>
+
+    <!-- Escena Principal -->
+    <main class="escena-ciclo">
+
+        <!-- Columna Nico con Globo y Botón Flotante de Sonido -->
+        <div class="columna-nico" id="columna-nico">
+            
+            <div class="globo-nico" id="globo-nico">
+                <!-- Botón Flotante de Sonido -->
+                <button id="btn-audio-top" class="btn-sonido-flotante" title="Sonido">
+                    <img src="../img/Sonido.png" alt="Sonido activado" id="img-audio-on" class="icono-audio">
+                    <img src="../img/Sonido desactivado .png" alt="Sonido desactivado" id="img-audio-off" class="icono-audio oculto">
+                </button>
+
+                <!-- Imagen o Texto del globo de Nico -->
+                <img src="../img/como crece una planta/Mensaje Nico - Ciclo de vida.png" alt="Mensaje de Nico" class="img-globo-nico">
+            </div>
+
+            <div class="personaje-oso">
+                <img src="../img/Explorador .png" alt="Nico el Explorador" class="oso-img" id="oso-nico">
+            </div>
+
+        </div>
+
+        <!-- Círculo del Ciclo de Vida -->
+        <div class="contenedor-ciclo-central">
+            
+            <!-- Recuadro Explicativo Central -->
+            <div class="recuadro-explicacion">
+                <img src="../img/como crece una planta/Recuadro - Ciclo plantas.png" alt="Explicación del ciclo" id="img-texto-explicacion" class="img-texto-central">
+            </div>
+
+            <!-- Círculo de Etapas + Flechas -->
+            <div class="rueda-etapas">
+
+                <!-- 1. Nace -->
+                <div class="item-ciclo pos-1">
+                    <button class="btn-etapa" data-audio-id="audio-etapa1" data-texto="../img/como crece una planta/Nace - Texto .png">
+                        <img src="../img/como crece una planta/Nace -Ciclo plantas .png" alt="Nace">
+                    </button>
+                    <img src="../img/como crece una planta/Flecha .png" class="flecha-ciclo rot-1" alt="Flecha">
+                </div>
+
+                <!-- 2. Crece -->
+                <div class="item-ciclo pos-2">
+                    <button class="btn-etapa" data-audio-id="audio-etapa2" data-texto="../img/como crece una planta/Crece - Texto .png">
+                        <img src="../img/como crece una planta/Crece - Ciclo plantas .png" alt="Crece">
+                    </button>
+                    <img src="../img/como crece una planta/Flecha .png" class="flecha-ciclo rot-2" alt="Flecha">
+                </div>
+
+                <!-- 3. Es adulta -->
+                <div class="item-ciclo pos-3">
+                    <button class="btn-etapa" data-audio-id="audio-etapa3" data-texto="../img/como crece una planta/Es adulta - Texto .png">
+                        <img src="../img/como crece una planta/Es adulta - Ciclo plantas .png" alt="Es adulta">
+                    </button>
+                    <img src="../img/como crece una planta/Flecha .png" class="flecha-ciclo rot-3" alt="Flecha">
+                </div>
+
+                <!-- 4. Florece -->
+                <div class="item-ciclo pos-4">
+                    <button class="btn-etapa" data-audio-id="audio-etapa4" data-texto="../img/como crece una planta/Florece - texto .png">
+                        <img src="../img/como crece una planta/Florece - Ciclo plantas .png" alt="Florece">
+                    </button>
+                    <img src="../img/como crece una planta/Flecha .png" class="flecha-ciclo rot-4" alt="Flecha">
+                </div> 
+
+                <!-- 5. Frutos / Semillas -->
+                <div class="item-ciclo pos-5">
+                    <button class="btn-etapa" data-audio-id="audio-etapa5" data-texto="../img/como crece una planta/Frutos,semilla - Texto .png">
+                        <img src="../img/como crece una planta/Frutos,semillas - Ciclo plantas .png" alt="Frutos y Semillas">
+                    </button>
+                    <img src="../img/como crece una planta/Flecha .png" class="flecha-ciclo rot-5" alt="Flecha">
+                </div>
+
+                <!-- 6. Muere -->
+                <div class="item-ciclo pos-6">
+                    <button class="btn-etapa" data-audio-id="audio-etapa6" data-texto="../img/como crece una planta/Muere -Texto .png">
+                        <img src="../img/como crece una planta/Mueren - Ciclo plantas.png" alt="Muere">
+                    </button>
+                    <img src="../img/como crece una planta/Flecha .png" class="flecha-ciclo rot-6" alt="Flecha">
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- BANCO DE AUDIOS -->
+    <audio id="audio-pop" src="../audios/pop seres vivos .mp3"></audio>
+    <audio id="audio-oso" src="../audios/plantas/mensaje nico - audio .mp3"></audio>
+    <audio id="audio-etapa1" src="../audios/plantas/nace - audio .mp3"></audio>
+    <audio id="audio-etapa2" src="../audios/plantas/crece - audio .mp3"></audio>
+    <audio id="audio-etapa3" src="../audios/plantas/Es adulta - audio .mp3"></audio>
+    <audio id="audio-etapa4" src="../audios/plantas/Florece -audio .mp3"></audio>
+    <audio id="audio-etapa5" src="../audios/plantas/Frutos,semillas -Audio.mp3"></audio>
+    <audio id="audio-etapa6" src="../audios/plantas/muere - audio .mp3"></audio>
+
+    <!-- Script de interacción -->
+    <script src="../js/crecimiento-planta.js" defer></script>
+</body>
+</html>

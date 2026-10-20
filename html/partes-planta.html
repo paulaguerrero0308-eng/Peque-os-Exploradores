@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/partes-planta.css">
+</head>
+<body>
+
+    <!-- Botón Menú Píldora (Arriba Izquierda) -->
+    <a href="menu.html" class="btn-home" title="Volver a plantas">
+        <span class="icon-home">🏠</span>
+        <span class="text-home">Menú</span>
+    </a>
+
+    <!-- Botón Audio / Silencio (Arriba Derecha) -->
+    <button id="btn-audio" class="btn-audio" title="Activar/Desactivar sonido">
+        <img src="../img/Sonido.png" alt="Sonido Activo" class="img-audio-on">
+        <img src="../img/Sonido desactivado .png" alt="Sonido Silenciado" class="img-audio-off">
+    </button>
+
+    <!-- Header / Banner Madera Superior -->
+    <header class="header-plantas">
+        <img src="../img/introplantas/Las plantas.png" alt="Las plantas" class="banner-titulo">
+        <img src="../img/explicacionplantas/Conozcamos su partes .png" alt="Conozcamos sus partes. Toca cada parte para aprender" class="banner-subtitulo">
+    </header>
+
+    <!-- Escena Principal -->
+    <main class="escena-plantas">
+        <!-- Botón Siguiente Actividad (Abajo Derecha) -->
+           <a href="actividad-partes.html" class="btn-siguiente" title="Ir a la actividad">
+          <img src="../img/siguiente.png" alt="Siguiente actividad">
+            </a>
+        <!-- Oso Interactivo -->
+        <div class="personaje-oso" id="btn-oso" style="cursor: pointer;">
+            <img src="../img/Explorador .png" alt="Oso Explorador" class="oso-img" id="oso-personaje">
+        </div>
+
+        <!-- Planta Ilustrada Principal con Conectores -->
+        <div class="contenedor-planta">
+            <img src="../img/explicacionplantas/Flor principal.png" alt="Planta y sus partes" class="planta-img">
+        </div>
+<!-- Columna de Cuadros Informativos con links de YouTube integrados -->
+<div class="opciones-cuadros">
+    
+    <button class="card-btn" data-video="https://www.youtube.com/embed/WvAVnvMXnFY?autoplay=1">
+        <img src="../img/explicacionplantas/Flor - Cuadro .png" alt="Flor - Ver video">
+    </button>
+
+    <button class="card-btn" data-video="https://www.youtube.com/embed/csQ4tUUplAQ?autoplay=1">
+        <img src="../img/explicacionplantas/Hojas - Cuadro .png" alt="Hojas - Ver video">
+    </button>
+
+    <button class="card-btn" data-video="https://www.youtube.com/embed/OfBE6v01gN4?autoplay=1">
+        <img src="../img/explicacionplantas/Tallo - Cuadro .png" alt="Tallo - Ver video">
+    </button>
+
+    <button class="card-btn" data-video="https://www.youtube.com/embed/SVVVj850mN4?autoplay=1">
+        <img src="../img/explicacionplantas/Raíz - Cuadro.png" alt="Raíz - Ver video">
+    </button>
+
+</div>
+
+<!-- Modal de Recuadro de Video (Punteado Morado con iframe) -->
+<div class="modal-video-container" id="modal-video">
+    <div class="marco-video">
+        <button class="btn-cerrar-modal" id="btn-cerrar">✖</button>
+        <iframe id="iframe-reproductor" 
+                src="" 
+                title="Reproductor de YouTube" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
+</div>
+        <!-- Modal de Recuadro de Video (Punteado Morado) -->
+        <div class="modal-video-container" id="modal-video">
+            <div class="marco-video">
+                <button class="btn-cerrar-modal" id="btn-cerrar">✖</button>
+                <video id="video-reproductor" controls>
+                    <source src="" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Banner Inferior -->
+    <footer class="footer-cta">
+        <img src="../img/explicacionplantas/Aprender es genial.png" alt="¡Aprender es genial! Explora y descubre más sobre las plantas" class="cta-img">
+    </footer>
+
+    <audio id="audio-intro" src="../audios/plantas/miralosvideosplantas.mp3" preload="auto"></audio>
+
+    <script src="../js/partes-planta.js" defer></script>
+</body>
+</html>

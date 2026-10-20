@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/explicacion-aire.css">
+</head>
+<body>
+
+    <!-- Botón Menú Superior Izquierda -->
+    <a href="intro-plantas.html" class="btn-menu-capsula" title="Volver al menú">
+        <span class="icon-home">🏠</span>
+        <span class="texto-menu">Menú</span>
+    </a>
+
+    <!-- Botón Flecha Siguiente -->
+    <a href="actividad-aire.html" class="btn-flecha-siguiente" title="Ir a la actividad">
+        <img src="../img/siguiente.png" alt="Siguiente">
+    </a>
+
+    <!-- Header Banner PNG -->
+    <header class="header-juego">
+        <img src="../img/explicacionaire/El aire - titulo .png" alt="El aire para las plantas" class="banner-titulo-aire">
+    </header>
+
+    <!-- Escena Principal -->
+    <main class="escena-juego">
+        
+        <!-- Columna Izquierda: Globo Fijo + Nico -->
+        <div class="columna-nico">
+            <div class="contenedor-globo" id="globo-nico">
+                <img src="../img/explicacionaire/Dialogo -La tierra .png" alt="Globo de diálogo" class="img-globo-aire">
+                
+                <!-- Botón de Sonido -->
+                <button class="btn-sonido-globo" id="btn-audio-explicacion" title="Escuchar a Nico">
+                    <img src="../img/Sonido.png" alt="Audio On" class="img-sonido-on">
+                    <img src="../img/Sonido desactivado .png" alt="Audio Off" class="img-sonido-off oculto">
+                </button>
+            </div>
+            
+            <div class="personaje-oso">
+                <img src="../img/Explorador .png" alt="Oso Explorador" class="oso-img" id="oso-nico">
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Marco Video YouTube -->
+        <div class="contenedor-marco-video">
+            <img src="../img/explicacionsol/Recuadro video .png" alt="Marco del video" class="img-marco-video">
+            
+            <div class="wrapper-iframe">
+                <iframe 
+                    class="video-youtube" 
+                    src="https://www.youtube.com/embed/C58iqki9rgM?si=0fFjADetrDn103su" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Audio de Nico -->
+    <audio id="audio-explicacion" src="../audios/plantas/descubramosvideo.mp3"></audio>
+
+    <script src="../js/explicacion-aire.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/actividad-como-se-mueven.css">
+</head>
+<body>
+
+    <!-- Botón Volver al Menú Superior Left -->
+    <a href="como-se-mueven.html" class="btn-menu-verde" title="Volver al Menú">
+        <span>🏠 Menú</span>
+    </a>
+
+    <!-- Botón de Sonido Flotante -->
+    <button id="btn-audio-top" class="btn-sonido-flotante" title="Controlar audio">
+        <img src="../img/Sonido.png" alt="Sonido activado" id="img-audio-on" class="icono-audio">
+        <img src="../img/Sonido desactivado .png" alt="Sonido desactivado" id="img-audio-off" class="icono-audio oculto">
+    </button>
+
+    <!-- Header / Título Banner Madera -->
+    <header class="header-banner">
+        <img src="../img/actividad 2 seres vivos/A jugar .png" alt="¡A jugar!" class="banner-titulo">
+    </header>
+
+    <!-- Pájaro Piwi (Haz clic en él para escuchar las instrucciones de nuevo) -->
+    <img src="../img/Piwi.png" alt="Piwi" id="piwi-pajaro" class="piwi-img" style="cursor: pointer;">
+
+    <!-- Escena Principal de la Actividad -->
+    <main class="escena-juego">
+
+        <!-- Columna Izquierda: Animales -->
+        <div class="columna-animales" id="columna-animales">
+            
+            <div class="item-animal" draggable="true" id="animal-caminan" data-tipo="caminan">
+                <img src="../img/caminanycorren/Elefante -pq.png" alt="Elefante">
+            </div>
+
+            <div class="item-animal" draggable="true" id="animal-saltan" data-tipo="saltan">
+                <img src="../img/saltan/Grillo - pq.png" alt="Grillo">
+            </div>
+
+            <div class="item-animal" draggable="true" id="animal-nadan" data-tipo="nadan">
+                <img src="../img/nadan/Tortuga - pq .png" alt="Tortuga">
+            </div>
+
+            <div class="item-animal" draggable="true" id="animal-vuelan" data-tipo="vuelan">
+                <img src="../img/vuelan/Abeja -pq.png" alt="Abeja">
+            </div>
+
+            <div class="item-animal" draggable="true" id="animal-arrastran" data-tipo="arrastran">
+                <img src="../img/arrastran/Lombriz - pq.png" alt="Lombriz">
+            </div>
+
+        </div>
+
+        <!-- Columna Derecha: Tarjetas de Hábitat / Movimiento -->
+        <div class="columna-destinos" id="columna-destinos">
+
+            <div class="tarjeta-destino" data-match="caminan">
+                <img src="../img/actividadcomosedesplazan/Escenario -caminan y corren .png" alt="Caminan / Corren">
+                <div class="overlay-feedback error oculto">❌</div>
+                <div class="overlay-feedback acierto oculto">⭐</div>
+            </div>
+
+            <div class="tarjeta-destino" data-match="nadan">
+                <img src="../img/actividadcomosedesplazan/Escenario - nadan .png" alt="Nadan">
+                <div class="overlay-feedback error oculto">❌</div>
+                <div class="overlay-feedback acierto oculto">⭐</div>
+            </div>
+
+            <div class="tarjeta-destino" data-match="saltan">
+                <img src="../img/actividadcomosedesplazan/Escenario - saltan .png" alt="Saltan">
+                <div class="overlay-feedback error oculto">❌</div>
+                <div class="overlay-feedback acierto oculto">⭐</div>
+            </div>
+
+            <div class="tarjeta-destino" data-match="arrastran">
+                <img src="../img/actividadcomosedesplazan/Escenario - Se arrastran .png" alt="Se arrastran">
+                <div class="overlay-feedback error oculto">❌</div>
+                <div class="overlay-feedback acierto oculto">⭐</div>
+            </div>
+
+            <div class="tarjeta-destino" data-match="vuelan">
+                <img src="../img/actividadcomosedesplazan/Escenario - vuelan .png" alt="Vuelan">
+                <div class="overlay-feedback error oculto">❌</div>
+                <div class="overlay-feedback acierto oculto">⭐</div>
+            </div>
+
+        </div>
+
+    </main>
+
+   <!-- Botón Volver al Menú Superior Izquierdo -->
+<a href="intro-animales.html" class="btn-menu-verde" title="Volver al Menú">
+    <span>🏠 Menú</span>
+</a>
+
+<!-- Modal de Victoria -->
+<div id="modal-victoria" class="modal-overlay oculto">
+    <div class="modal-contenido">
+        <h2>¡Excelente Trabajo! 🎉</h2>
+        <p>Has ayudado a todos los animales a encontrar cómo se mueven.</p>
+        <div class="modal-botones">
+            <button id="btn-reiniciar" class="btn-juego">Jugar de nuevo 🔄</button>
+            <a href="intro-animales.html" class="btn-juego">Volver al Menú 🏠</a>
+        </div>
+    </div>
+</div>
+
+    <!-- AUDIO -->
+    <audio id="audio-piwi" src="../audios/animales/actividadesplazan.mp3"></audio>
+
+    <script src="../js/actividad-como-se-mueven.js" defer></script>
+</body>
+</html>

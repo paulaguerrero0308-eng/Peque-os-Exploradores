@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/saltan.css">
+</head>
+<body>
+
+    <!-- Botón Volver al Menú Anterior -->
+    <a href="como-se-mueven.html" class="btn-menu-verde" title="Volver a ¿Cómo se mueven?">
+        <span>🏠 Menú</span>
+    </a>
+
+    <!-- Botón de Sonido Flotante Transparente (Esquina Superior Derecha) -->
+    <button id="btn-audio-top" class="btn-sonido-flotante" title="Controlar audio">
+        <img src="../img/Sonido.png" alt="Sonido activado" id="img-audio-on" class="icono-audio">
+        <img src="../img/Sonido desactivado .png" alt="Sonido desactivado" id="img-audio-off" class="icono-audio oculto">
+    </button>
+
+    <!-- Header / Título Banner Madera -->
+    <header class="header-banner">
+        <img src="../img/saltan/Saltan - titulo .png" alt="Saltan" class="banner-titulo">
+    </header>
+
+    <!-- Pájaro Piwi Flotante -->
+    <img src="../img/Piwi.png" alt="Piwi" id="piwi-pajaro" class="piwi-img">
+
+    <!-- Escena Principal -->
+    <main class="escena-explicacion">
+
+        <!-- Contenedor Central: Imagen Grande del Animal y Cuadro Explicativo -->
+        <div class="contenedor-principal">
+            
+            <!-- Imagen Grande Principal -->
+            <div class="area-animal-grande">
+                <img src="../img/saltan/Conejo - grande .png" alt="Animal que salta" id="animal-grande">
+            </div>
+
+            <!-- Cuadro Informativo / Explicación -->
+            <div class="cuadro-explicacion">
+                <img src="../img/saltan/Explicacion - saltan .png" alt="Algunos animales se desplazan dando saltos..." class="img-explicacion">
+            </div>
+
+        </div>
+
+        <!-- Barra Inferior de Miniaturas de Animales -->
+        <nav class="barra-animales-mini">
+
+            <!-- Conejo -->
+            <button class="btn-mini activo" data-img="../img/saltan/Conejo - grande .png">
+                <img src="../img/saltan/Conejo -pq.png" alt="Conejo">
+            </button>
+
+            <!-- Rana -->
+            <button class="btn-mini" data-img="../img/saltan/Rana - Grande .png">
+                <img src="../img/saltan/Rana - pq.png" alt="Rana">
+            </button>
+
+            <!-- Canguro -->
+            <button class="btn-mini" data-img="../img/saltan/canguro - grande .png">
+                <img src="../img/saltan/Canguro - pq.png" alt="Canguro">
+            </button>
+
+            <!-- Grillo -->
+            <button class="btn-mini" data-img="../img/saltan/Grillo - grande .png">
+                <img src="../img/saltan/Grillo - pq.png" alt="Grillo">
+            </button>
+
+        </nav>
+
+    </main>
+
+    <!-- BANCO DE AUDIOS -->
+    <audio id="audio-piwi" src="../audios/animales/saltan.mp3"></audio>
+
+    <script src="../js/saltan.js" defer></script>
+</body>
+</html>

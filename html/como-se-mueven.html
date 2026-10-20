@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/como-se-mueven.css">
+</head>
+<body>
+
+    <!-- Botón Volver al Menú Anterior -->
+    <a href="intro-animales.html" class="btn-menu-verde" title="Volver a animales">
+
+        <span>🏠Menú</span>
+    </a>
+
+    <!-- Botón de Sonido Flotante Transparente (Esquina Superior Derecha) -->
+    <button id="btn-audio-top" class="btn-sonido-flotante" title="Controlar audio">
+        <img src="../img/Sonido.png" alt="Sonido activado" id="img-audio-on" class="icono-audio">
+        <img src="../img/Sonido desactivado .png" alt="Sonido desactivado" id="img-audio-off" class="icono-audio oculto">
+    </button>
+
+    <!-- Header / Titulo Banner Madera -->
+    <header class="header-banner">
+        <img src="../img/comosemueven/Como se mueven los animales - titulo .png" alt="¿Cómo se mueven los animales?" class="banner-titulo">
+    </header>
+
+    <!-- Escena Principal -->
+    <main class="escena-mueven">
+
+        <!-- Personaje Nico a la Izquierda -->
+        <div class="columna-nico">
+            <img src="../img/Explorador .png" alt="Nico Explorador" id="oso-nico" class="oso-img">
+        </div>
+
+        <!-- Tarjetas de Movimiento -->
+        <nav class="contenedor-tarjetas">
+
+            <!-- 1. Caminan y corren -->
+            <a href="caminan-corren.html" class="tarjeta-movimiento">
+                <img src="../img/comosemueven/Camina -Tarjeta .png" alt="Caminan y corren">
+            </a>
+
+            <!-- 2. Saltan -->
+            <a href="saltan.html" class="tarjeta-movimiento">
+                <img src="../img/comosemueven/Saltan - Tarjeta.png" alt="Saltan">
+            </a>
+
+            <!-- 3. Vuelan -->
+            <a href="vuelan.html" class="tarjeta-movimiento">
+                <img src="../img/comosemueven/Vuelan - Tarjeta .png" alt="Vuelan">
+            </a>
+
+            <!-- 4. Nadan -->
+            <a href="nadan.html" class="tarjeta-movimiento">
+                <img src="../img/comosemueven/Nadan - Tarjeta .png" alt="Nadan">
+            </a>
+
+            <!-- 5. Se arrastran -->
+            <a href="se-arrastran.html" class="tarjeta-movimiento">
+                <img src="../img/comosemueven/Se arrastran - tarjeta .png" alt="Se arrastran">
+            </a>
+
+        </nav>
+
+    </main>
+
+    <!-- BANCO DE AUDIOS -->
+    <audio id="audio-instruccion" src="../audios/animales/intruccionescomosemueven.mp3"></audio>
+    <audio id="audio-pop" src="../audios/pop seres vivos .mp3"></audio>
+
+    <script src="../js/como-se-mueven.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/necesidades-planta.css">
+</head>
+<body>
+
+    <!-- Botón Menú Superior Izquierda -->
+    <a href="intro-plantas.html" class="btn-menu-capsula" title="Volver al menú">
+        <span class="icon-home">🏠</span>
+        <span class="texto-menu">Menú</span>
+    </a>
+
+    <!-- Header Banners -->
+    <header class="header-juego">
+        <img src="../img/q necesitan para vivir intro/Que necesitan para vivir .png" alt="¿Qué necesitan para vivir?" class="banner-titulo">
+        <img src="../img/q necesitan para vivir intro/Las plantas necesitan .png" alt="Las plantas necesitan:" class="banner-subtitulo">
+    </header>
+
+    <!-- Escena Principal -->
+    <main class="escena-juego">
+        
+        <!-- Oso Nico -->
+        <div class="personaje-oso">
+            <img src="../img/Explorador .png" alt="Oso Explorador" class="oso-img" id="oso-nico">
+        </div>
+
+        <!-- Las 4 Tarjetas PNG -->
+        <div class="contenedor-tarjetas">
+            <a href="explicacion-sol.html" class="btn-tarjeta">
+                <img src="../img/q necesitan para vivir intro/Sol - Tarjeta .png" alt="Luz del Sol">
+            </a>
+
+            <a href="explicacion-agua.html" class="btn-tarjeta">
+                <img src="../img/q necesitan para vivir intro/Agua -  Tarjeta.png" alt="Agua">
+            </a>
+
+            <a href="explicacion-tierra.html" class="btn-tarjeta">
+                <img src="../img/q necesitan para vivir intro/Tierra - Tarjeta.png" alt="Tierra">
+            </a>
+
+            <a href="explicacion-aire.html" class="btn-tarjeta">
+                <img src="../img/q necesitan para vivir intro/Aire - Tarjeta .png" alt="Aire">
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer Banner Inferior -->
+    <footer class="footer-juego">
+        <div class="banner-inferior-container">
+            <img src="../img/q necesitan para vivir intro/Escoge.png" alt="¡Sin estos elementos, no pueden crecer!" class="img-banner-inferior">
+            
+            <!-- Botón de Audio Morado encajado exacto -->
+            <button class="btn-sonido" id="btn-audio-intro" title="Escuchar audio">
+                <img src="../img/q necesitan para vivir intro/Sonido - morado .png" alt="Audio">
+            </button>
+        </div>
+    </footer>
+
+    <!-- Audio de Nico -->
+    <audio id="audio-intro" src="../audios/plantas/miraexplorador.mp3"></audio>
+
+    <script src="../js/necesidades-planta.js" defer></script>
+</body>
+</html>

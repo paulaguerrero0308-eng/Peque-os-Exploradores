@@ -1,0 +1,200 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url("../img/Fondo\ -\ Animales\ .png") no-repeat center center / cover;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 15px 0;
+    position: relative;
+    user-select: none;
+}
+
+/* Botón Menú Verde Superior Izquierdo */
+.btn-menu-verde {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    border: 4px solid #73bf43;
+    padding: 6px 20px 6px 12px;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.btn-menu-verde span {
+    color: #4a2c11;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.btn-menu-verde:hover {
+    transform: scale(1.08);
+}
+
+/* Botón Sonido Superior Derecho */
+.btn-sonido-flotante {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.icono-audio {
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+}
+
+/* Header Banner */
+.header-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.banner-titulo {
+    width: 420px;
+    height: auto;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.25));
+}
+
+.subtitulo-caja {
+    margin-top: -5px;
+}
+
+.subtitulo-img {
+    width: 320px;
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.15));
+}
+
+/* Escena Principal (Tarjetas y Piwi elevados) */
+.escena-donde-viven {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: translateY(-50px); /* Eleva las tarjetas y a Piwi */
+    z-index: 10;
+}
+
+/* Contenedor de Tarjetas */
+.tarjetas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Estructura del Flip 3D */
+.tarjeta-flip {
+    width: 270px;
+    height: 190px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.tarjeta-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+/* Giro al hacer clic */
+.tarjeta-flip.volteada .tarjeta-inner {
+    transform: rotateY(180deg);
+}
+
+.tarjeta-frente,
+.tarjeta-reverso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 18px;
+}
+
+.tarjeta-frente img,
+.tarjeta-reverso img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.2));
+}
+
+/* Reverso de la tarjeta (oculto por defecto) */
+.tarjeta-reverso {
+    transform: rotateY(180deg);
+}
+
+/* Personaje Piwi */
+.contenedor-piwi {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.piwi-img {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(0px 6px 10px rgba(0,0,0,0.25));
+}
+
+/* Botón Imagen Siguiente Inferior Derecho */
+.btn-flecha-madera {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 200;
+    display: inline-block;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-flecha-madera img {
+    width: 85px;
+    height: auto;
+    filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
+}
+
+.btn-flecha-madera:hover {
+    transform: scale(1.1);
+    filter: brightness(1.05);
+}
+
+.oculto {
+    display: none !important;
+}

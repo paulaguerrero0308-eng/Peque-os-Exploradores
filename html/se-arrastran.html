@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/se-arrastran.css">
+</head>
+<body>
+
+    <!-- Botón Volver al Menú Anterior -->
+    <a href="como-se-mueven.html" class="btn-menu-verde" title="Volver a ¿Cómo se mueven?">
+        <span>🏠 Menú</span>
+    </a>
+
+    <!-- Botón de Sonido Flotante Transparente (Esquina Superior Derecha) -->
+    <button id="btn-audio-top" class="btn-sonido-flotante" title="Controlar audio">
+        <img src="../img/Sonido.png" alt="Sonido activado" id="img-audio-on" class="icono-audio">
+        <img src="../img/Sonido desactivado .png" alt="Sonido desactivado" id="img-audio-off" class="icono-audio oculto">
+    </button>
+
+    <!-- Header / Título Banner Madera -->
+    <header class="header-banner">
+        <img src="../img/arrastran/Se arrastran - titulo .png" alt="Se arrastran" class="banner-titulo">
+    </header>
+
+    <!-- Pájaro Piwi Flotante -->
+    <img src="../img/Piwi.png" alt="Piwi" id="piwi-pajaro" class="piwi-img">
+
+    <!-- Escena Principal -->
+    <main class="escena-explicacion">
+
+        <!-- Contenedor Central: Imagen Grande del Animal y Cuadro Explicativo -->
+        <div class="contenedor-principal">
+            
+            <!-- Imagen Grande Principal (Caracol inicial) -->
+            <div class="area-animal-grande">
+                <img src="../img/arrastran/Caracol - grande .png" alt="Animal que se arrastra" id="animal-grande">
+            </div>
+
+            <!-- Cuadro Informativo / Explicación -->
+            <div class="cuadro-explicacion">
+                <img src="../img/arrastran/Explicacion - se arrastran .png" alt="Explicación de cómo se arrastran los animales" class="img-explicacion">
+            </div>
+
+        </div>
+
+        <!-- Barra Inferior: Miniaturas de Animales + Flecha Siguiente -->
+        <div class="contenedor-inferior">
+
+            <!-- Barra Inferior de Miniaturas de Animales -->
+            <nav class="barra-animales-mini">
+
+                <!-- Caracol -->
+                <button class="btn-mini activo" data-img="../img/arrastran/Caracol - grande .png">
+                    <img src="../img/arrastran/caracol - pq.png" alt="Caracol">
+                </button>
+
+                <!-- Lombriz -->
+                <button class="btn-mini" data-img="../img/arrastran/Lombriz - Grande .png">
+                    <img src="../img/arrastran/Lombriz - pq.png" alt="Lombriz">
+                </button>
+
+                <!-- Oruga -->
+                <button class="btn-mini" data-img="../img/arrastran/Oruga - Grande .png">
+                    <img src="../img/arrastran/Oruga -pq.png" alt="Oruga">
+                </button>
+
+                <!-- Serpiente -->
+                <button class="btn-mini" data-img="../img/arrastran/Serpiente - grande .png">
+                    <img src="../img/arrastran/Serpiente - pq .png" alt="Serpiente">
+                </button>
+
+            </nav>
+
+            <!-- Flecha de Siguiente hacia la Actividad General (Abajo a la Derecha) -->
+            <a href="actividad-como-se-mueven.html" class="btn-siguiente-derecha" title="Ir a la actividad">
+                <img src="../img/siguiente.png" alt="Siguiente">
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- BANCO DE AUDIOS -->
+    <audio id="audio-piwi" src="../audios/animales/arrastran.mp3"></audio>
+
+    <script src="../js/se-arrastran.js" defer></script>
+</body>
+</html>

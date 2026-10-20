@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/actividad-donde-viven.css">
+</head>
+<body>
+
+    <!-- Botón Menú Verde -->
+    <a href="intro-animales.html" class="btn-menu-verde" title="Volver al Menú">
+        <span>🏠 Menú</span>
+    </a>
+
+    <!-- Botón Sonido Superior Derecho -->
+    <button id="btn-audio-top" class="btn-sonido-flotante" type="button" title="Controlar audio">
+        <img src="../img/Sonido.png" alt="Sonido activado" id="img-audio-on" class="icono-audio">
+        <img src="../img/Sonido desactivado .png" alt="Sonido desactivado" id="img-audio-off" class="icono-audio oculto">
+    </button>
+
+    <!-- Header Título Banner -->
+    <header class="header-banner">
+        <img src="../img/actividaddondeviven/Encuentra al animal perdido .png" alt="¡Encuentra al animal perdido!" class="banner-titulo">
+        <div class="subtitulo-caja">
+            <img src="../img/actividaddondeviven/Observa el hábitat .png" alt="Observa el hábitat y descubre qué animal no pertenece." class="subtitulo-img">
+        </div>
+    </header>
+
+    <!-- Escena Principal de Juego -->
+    <main class="escena-juego">
+
+        <!-- Ventana del Hábitat -->
+        <div class="marco-habitat">
+            <div id="escenario-habitat" class="fondo-habitat">
+                <!-- Los animales se cargan dinámicamente desde JS -->
+                <div id="contenedor-animales" class="contenedor-animales"></div>
+            </div>
+        </div>
+
+        <!-- Personaje Piwi y Globo -->
+        <div class="columna-piwi">
+            <div class="globo-piwi">
+                <img src="../img/actividaddondeviven/toca el animal .png" alt="¡Toca el animal que no pertenece a este hábitat!" class="img-globo">
+            </div>
+            <div class="contenedor-piwi">
+                <img src="../img/piwi.png" alt="Piwi Narrador" id="piwi-narrador" class="piwi-img">
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Botón Siguiente -->
+    <a href="intro-animales.html" class="btn-flecha-madera" id="btn-siguiente" title="Siguiente">
+        <img src="../img/siguiente.png" alt="Siguiente">
+    </a>
+
+    <!-- AUDIOS -->
+    <audio id="audio-instruccion" src="../audios/animales/explica.mp3" preload="auto"></audio>
+    <audio id="audio-correcto" src="../audios/animales/felicitacionespiwi.mp3" preload="auto"></audio>
+    <audio id="audio-incorrecto" src="../audios/incorrecto.mp3" preload="auto"></audio>
+
+    <script src="../js/actividad-donde-viven.js" defer></script>
+</body>
+</html>

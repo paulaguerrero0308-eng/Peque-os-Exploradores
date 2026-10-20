@@ -1,0 +1,272 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url("../img/Fondo\ -\ Animales\ .png") no-repeat center center / cover;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0 10px 0;
+    position: relative;
+    user-select: none;
+}
+
+/* Botón Menú Verde Superior Izquierdo */
+.btn-menu-verde {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    border: 4px solid #73bf43;
+    padding: 6px 20px 6px 12px;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.btn-menu-verde span {
+    color: #4a2c11;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.btn-menu-verde:hover {
+    transform: scale(1.08);
+}
+
+/* Botón Sonido Superior Derecho */
+.btn-sonido-flotante {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.icono-audio {
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+}
+
+/* Header Banner ¡A jugar! */
+.header-banner {
+    z-index: 10;
+}
+
+.banner-titulo {
+    max-width: 420px;
+    height: auto;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.2));
+}
+
+/* Piwi Flotante */
+.piwi-img {
+    position: fixed;
+    top: 20px;
+    right: 100px;
+    width: 95px;
+    height: auto;
+    z-index: 20;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.18));
+    cursor: pointer;
+}
+
+/* Escena Principal de Juego */
+.escena-juego {
+    width: 100%;
+    max-width: 1100px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 60px;
+    z-index: 10;
+}
+
+/* Columna Izquierda: Círculos de Animales */
+.columna-animales {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-animal {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    background-color: #fbedd0;
+    border: 4px solid #dfc79b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.18);
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.item-animal:hover {
+    transform: scale(1.1);
+}
+
+.item-animal.arrastrando {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+.item-animal.completado {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.item-animal img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/* Columna Derecha: Tarjetas de Hábitat */
+.columna-destinos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tarjeta-destino {
+    position: relative;
+    width: 210px;
+    height: 95px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-destino img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    pointer-events: none;
+    display: block;
+}
+
+.tarjeta-destino.drag-over {
+    transform: scale(1.08);
+    box-shadow: 0px 0px 15px rgba(46, 204, 113, 0.8);
+}
+
+/* Feedback Visual (Acierto ⭐ / Error ❌) */
+.overlay-feedback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    z-index: 30;
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.overlay-feedback.error {
+    background-color: rgba(231, 76, 60, 0.6);
+}
+
+.overlay-feedback.acierto {
+    background-color: rgba(46, 204, 113, 0.6);
+}
+
+/* Modal de Victoria */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+.modal-contenido {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 25px;
+    text-align: center;
+    border: 5px solid #73bf43;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+}
+
+.modal-contenido h2 {
+    color: #4a2c11;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.modal-contenido p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Botones del Modal */
+.modal-botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.btn-juego {
+    background-color: #73bf43;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 20px;
+    font-family: inherit;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+    text-decoration: none; /* Sin subrayado en enlaces */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-juego:hover {
+    transform: scale(1.08);
+}
+
+.oculto {
+    display: none !important;
+}

@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    
+    background-image: url("../img/Fondo del menú principal.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    font-family: "Fredoka", sans-serif;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem 2rem 2rem;
+    position: relative;
+}
+
+/* Botón Volver */
+.btn-volver {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background-color: #ffffff;
+    color: #5c3a21;
+    padding: 0.8rem 1.6rem;
+    border-radius: 2.5rem;
+    border: 3px solid #7fbf5b;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+/* 1. Título GRANDE como en la 2da imagen */
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.6rem;
+}
+
+.logo {
+    width: 500px; /* Tamaño grande para destacar */
+    max-width: 60vw;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* 2. Contenedor Escena Central */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 780px;
+    flex-grow: 1;
+    gap: 1.6rem;
+}
+
+.intro__escena {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    width: 100%;
+}
+
+/* Oso en proporción con el globo */
+.intro__oso {
+    width: 260px;
+    max-width: 30vw;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.15));
+}
+
+/* Globo / Cartel central */
+.intro__globo {
+    width: 330px;
+    max-width: 50vw;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.15));
+}
+
+/* 3. Botón COMENZAMOS abajo */
+.btn-comenzar {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn-comenzar img {
+    width: 250px;
+    max-width: 32vw;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.2));
+}
+
+.btn-comenzar:hover {
+    transform: scale(1.05);
+}
+/* Botón verde de sonido flotante */
+.btn-sonido-flotante {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.2s ease;
+}
+
+.btn-sonido-flotante img {
+    width: 55px;
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
+}
+
+.btn-sonido-flotante:hover {
+    transform: scale(1.1);
+}
+
+/* Cursor de manito sobre el oso para saber que se le puede dar clic */
+.intro__oso {
+    cursor: pointer;
+}

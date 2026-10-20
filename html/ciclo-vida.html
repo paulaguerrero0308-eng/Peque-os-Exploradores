@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <!-- Ícono de la pestaña -->
+    <link rel="icon" type="image/png" href="../img/Isotipo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de estilos específica para esta pantalla -->
+    <link rel="stylesheet" href="../css/ciclo-vida.css">
+</head>
+<body>
+
+    <!-- Botón Volver al Menú -->
+    <a href="menu.html" class="btn-volver" title="Volver al Menú Principal">
+        🏠 Menú
+    </a>
+
+   <!-- Botón Flotante de Sonido -->
+<button id="btn-audio-top" class="btn-sonido-flotante" title="Sonido">
+    <img src="../img/Sonido.png" alt="Sonido activado" id="img-audio-on" class="icono-audio">
+    <img src="../img/Sonido desactivado .png" alt="Sonido desactivado" id="img-audio-off" class="icono-audio oculta">
+</button>
+    
+
+    <!-- Título Principal Superior -->
+    <header class="header">
+        <img src="../img/explicacion seres vivos/El ciclo de vida .png" alt="El ciclo de la vida" class="logo">
+    </header>
+
+    <!-- Banner con la frase explicativa -->
+    <div class="banner">
+        <img src="../img/explicacion seres vivos/Todos los seres vivos .png" alt="Explicación del ciclo" class="banner-img">
+    </div>
+    
+
+    <!-- Escena Central -->
+    <main class="escena">
+        
+        <!-- Personaje (Oso + Globo) -->
+        <div class="personaje" id="btn-oso" style="cursor: pointer;">
+            <img src="../img/explicacion seres vivos/explicacion globo .png" alt="Globo de diálogo" class="globo" id="globo-oso">
+            <img src="../img/Explorador .png" alt="Oso Explorador" class="oso" id="oso-img">
+        </div>
+
+        <div class="etapas-container">
+            
+            <!-- Etapa 1 -->
+            <div class="card-etapa" data-audio="audio-etapa1">
+                <img src="../img/explicacion seres vivos/Nace .png" alt="Nacen">
+            </div>
+
+            <span class="flecha-naranja">➔</span>
+
+            <!-- Etapa 2 -->
+            <div class="card-etapa" data-audio="audio-etapa2">
+                <img src="../img/explicacion seres vivos/Crece.png" alt="Crecen">
+            </div>
+
+            <span class="flecha-naranja">➔</span>
+
+            <!-- Etapa 3 -->
+            <div class="card-etapa" data-audio="audio-etapa3">
+                <img src="../img/explicacion seres vivos/Se alimenta .png" alt="Se alimentan">
+            </div>
+
+            <span class="flecha-naranja">➔</span>
+
+            <!-- Etapa 4 -->
+            <div class="card-etapa" data-audio="audio-etapa4">
+                <img src="../img/explicacion seres vivos/Se reproducen.png" alt="Se reproducen">
+            </div>
+
+            <span class="flecha-naranja">➔</span>
+
+            <!-- Etapa 5 -->
+            <div class="card-etapa" data-audio="audio-etapa5">
+                <img src="../img/explicacion seres vivos/Mueren .png" alt="Mueren">
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Barra Inferior -->
+    <footer class="footer">
+        <img src="../img/explicacion seres vivos/Descubramos si recuerdas.png" alt="Instrucción final" class="globo-footer">
+        
+        <a href="actividad1-ciclo.html" class="btn-jugar" id="btn-jugar">
+            <img src="../img/explicacion seres vivos/A jugar - Botón .png" alt="¡A Jugar!">
+        </a>
+    </footer>
+
+    <!-- BANCO DE AUDIOS -->
+    <audio id="audio-pop" src="../audios/pop seres vivos .mp3"></audio>
+    <audio id="audio-oso" src="../audios/sabias que los seres vivos .mp3"></audio>
+    <audio id="audio-etapa1" src="../audios/etapa1.mp3"></audio>
+    <audio id="audio-etapa2" src="../audios/etapa2 .mp3"></audio>
+    <audio id="audio-etapa3" src="../audios/etapa3 .mp3"></audio>
+    <audio id="audio-etapa4" src="../audios/etapa4 .mp3"></audio>
+    <audio id="audio-etapa5" src="../audios/etapa5 .mp3"></audio>
+
+    <!-- Script de interacción -->
+    <script src="../js/ciclo-vida.js"></script>
+</body>
+</html>

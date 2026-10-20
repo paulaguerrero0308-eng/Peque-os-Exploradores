@@ -1,0 +1,157 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url("../img/Fondo\ -\ Animales\ .png") no-repeat center center / cover;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    user-select: none;
+}
+
+/* Botón Menú Verde Superior Izquierdo */
+.btn-menu-verde {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    border: 4px solid #73bf43;
+    padding: 6px 20px 6px 12px;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-menu-verde .icono-casa {
+    width: 32px;
+    height: auto;
+}
+
+.btn-menu-verde span {
+    color: #4a2c11;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.btn-menu-verde:hover {
+    transform: scale(1.08);
+    background-color: #f4ffe8;
+}
+
+/* Botón de Sonido Flotante Transparente (Esquina Superior Derecha) */
+.btn-sonido-flotante {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.btn-sonido-flotante:hover {
+    transform: scale(1.1);
+}
+
+.icono-audio {
+    width: 50px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+}
+
+/* Titulo Banner Superior */
+.header-banner {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    z-index: 10;
+}
+
+.banner-titulo {
+    max-width: 500px;
+    height: auto;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.2));
+}
+
+/* Escena Principal */
+.escena-mueven {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Oso Nico a la Izquierda */
+.columna-nico {
+    position: absolute;
+    left: 40px;
+    bottom: 20px;
+    z-index: 20;
+}
+
+.columna-nico .oso-img {
+    width: 230px;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.columna-nico .oso-img:hover {
+    transform: scale(1.04);
+}
+
+/* Contenedor de las 5 Tarjetas */
+.contenedor-tarjetas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-left: 200px; /* Espacio reservado para Nico */
+    z-index: 10;
+}
+
+/* Tarjetas individuales de movimiento */
+.tarjeta-movimiento {
+    display: block;
+    width: 150px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+}
+
+.tarjeta-movimiento img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0px 6px 12px rgba(0,0,0,0.18));
+}
+
+.tarjeta-movimiento:hover {
+    transform: translateY(-10px) scale(1.06);
+}
+
+.oculto {
+    display: none !important;
+}

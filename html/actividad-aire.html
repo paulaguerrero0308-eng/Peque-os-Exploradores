@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/actividad-aire.css">
+</head>
+<body>
+
+    <!-- Botón Menú -->
+    <a href="intro-plantas.html" class="btn-menu-capsula" title="Volver al menú">
+        <span class="icono-casa">🏠</span>
+        <span class="texto-menu">Menú</span>
+    </a>
+
+    <!-- Botón Flecha Siguiente (Regresa al menú al ganar) -->
+    <a href="intro-plantas.html" class="btn-flecha-siguiente oculto" id="btn-siguiente" title="Volver al menú">
+        <img src="../img/siguiente.png" alt="Siguiente">
+    </a>
+
+    <!-- Banner Principal -->
+    <header class="header-juego">
+        <img src="../img/actividad 2 seres vivos/A jugar .png" alt="¡A jugar!" class="banner-titulo-juego" id="banner-titulo">
+    </header>
+
+    <!-- Pregunta Inicial -->
+    <div class="instruccion-capsula" id="capsula-instruccion">
+        <img src="../img/actividadaire/Instrucción - Aire .png" alt="¿Cuál es el aire que ayuda a la planta?" class="img-instruccion">
+        <img src="../img/actividadaire/Instrucción 2 - Aire .png" alt="Toca la opción correcta." class="img-sub-instruccion">
+    </div>
+
+    <!-- Escena Principal -->
+    <main class="escena-juego">
+        
+        <!-- Nico + Globo -->
+        <div class="columna-nico">
+            <div class="contenedor-globo" id="globo-nico">
+                <img src="../img/actividadaire/Globo -  Aire .png" alt="Las plantas necesitan el aire natural..." class="img-globo">
+            </div>
+
+            <div class="personaje-oso">
+                <img src="../img/Explorador .png" alt="Oso Explorador" class="oso-img" id="oso-nico">
+            </div>
+        </div>
+
+        <!-- Tarjetas de Opciones -->
+        <div class="contenedor-opciones" id="contenedor-opciones">
+            
+            <div class="tarjeta-opcion" data-opcion="viento" data-es-correcta="true">
+                <img src="../img/actividadaire/Aire natural.png" alt="Aire natural" class="img-opcion">
+            </div>
+
+            <div class="tarjeta-opcion" data-opcion="fuego" data-es-correcta="false">
+                <img src="../img/actividadaire/Fogata.png" alt="Fuego" class="img-opcion">
+            </div>
+
+            <div class="tarjeta-opcion" data-opcion="ventilador" data-es-correcta="false">
+                <img src="../img/actividadaire/Ventilador .png" alt="Ventilador" class="img-opcion">
+            </div>
+
+            <div class="tarjeta-opcion" data-opcion="aire" data-es-correcta="false">
+                <img src="../img/actividadaire/Aire acondicionado.png" alt="Aire acondicionado" class="img-opcion">
+            </div>
+
+        </div>
+
+        <!-- Modal / Letreros de Retroalimentación -->
+        <div class="modal-explicacion oculto" id="modal-explicacion">
+            <div class="contenido-modal">
+                <img src="../img/actividadaire/Fogata retroalimentacion .png" alt="Fuego" class="img-letrero oculto" id="letrero-fuego">
+                <img src="../img/actividadaire/Ventilador retroalimentación .png" alt="Ventilador" class="img-letrero oculto" id="letrero-ventilador">
+                <img src="../img/actividadaire/Aire acondicionado retroalimentacion.png" alt="Aire acondicionado" class="img-letrero oculto" id="letrero-aire">
+                <img src="../img/actividadaire/Aire natural retroalimentacion .png" alt="Aire natural" class="img-letrero oculto" id="letrero-viento">
+                
+                <button class="btn-volver-intentar" id="btn-reintentar">
+                    <span>Volver a intentar</span> 🔄
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Audios del juego -->
+    <audio id="audio-correcto" src="../audios/correcto.mp3"></audio>
+    <audio id="audio-incorrecto" src="../audios/incorrecto.mp3"></audio>
+
+    <!-- Audios explicativos por opción -->
+    <audio id="audio-viento" src="../audios/plantas/airenatural.mp3"></audio>
+    <audio id="audio-fuego" src="../audios/plantas/humomalo.mp3"></audio>
+    <audio id="audio-ventilador" src="../audios/plantas/ventilador.mp3"></audio>
+    <audio id="audio-aire" src="../audios/plantas/aireacondicionadomalo.mp3"></audio>
+
+    <script src="../js/actividad-aire.js" defer></script>
+</body>
+</html>

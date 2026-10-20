@@ -1,0 +1,201 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url("../img/Fondo\ -\ Animales\ .png") no-repeat center center / cover;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 15px 0;
+    position: relative;
+    user-select: none;
+}
+
+/* Botón Menú Verde */
+.btn-menu-verde {
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    border: 4px solid #73bf43;
+    padding: 6px 20px 6px 12px;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.btn-menu-verde span {
+    color: #4a2c11;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.btn-menu-verde:hover {
+    transform: scale(1.08);
+}
+
+/* Botón Sonido Superior Derecho */
+.btn-sonido-flotante {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.icono-audio {
+    width: 50px;
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.25));
+}
+
+/* Banner Superior */
+.header-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.banner-titulo {
+    width: 450px;
+    height: auto;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.25));
+}
+
+.subtitulo-caja {
+    margin-top: -5px;
+}
+
+.subtitulo-img {
+    width: 320px;
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.15));
+}
+
+/* Escena Principal */
+.escena-juego {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: translateY(-20px);
+    gap: 30px;
+    z-index: 10;
+}
+
+/* Marco del Hábitat */
+.marco-habitat {
+    background-color: #ffffff;
+    border: 10px solid #fff5e6;
+    border-radius: 30px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+    padding: 10px;
+    width: 720px;
+    height: 380px;
+}
+
+.fondo-habitat {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* Contenedor de Animales dentro del Hábitat */
+.contenedor-animales {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.animal-item {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.3));
+}
+
+.animal-item:hover {
+    transform: scale(1.15);
+}
+
+/* Columna Piwi */
+.columna-piwi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+}
+
+.globo-piwi {
+    margin-bottom: 10px;
+}
+
+.img-globo {
+    width: 180px;
+    height: auto;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.2));
+}
+
+.contenedor-piwi {
+    display: flex;
+    justify-content: center;
+}
+
+.piwi-img {
+    width: 160px;
+    height: auto;
+    filter: drop-shadow(0px 6px 10px rgba(0,0,0,0.25));
+}
+
+/* Botón Flecha Siguiente */
+.btn-flecha-madera {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 200;
+    display: inline-block;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.btn-flecha-madera img {
+    width: 85px;
+    height: auto;
+    filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.3));
+}
+
+.btn-flecha-madera:hover {
+    transform: scale(1.1);
+    filter: brightness(1.05);
+}
+
+.oculto {
+    display: none !important;
+}

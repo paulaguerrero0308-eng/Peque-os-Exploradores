@@ -1,0 +1,204 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body {
+    background: url("../img/Fondo\ del\ menú\ principal.png") no-repeat center center/cover;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+/* Botón Volver al Menú */
+.btn-volver {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    background: #ffffff;
+    color: #5c3a21;
+    padding: 0.6rem 1.4rem;
+    border-radius: 2rem;
+    border: 3px solid #7fbf5b;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+}
+
+/* Botón de Sonido Flotante */
+.btn-sonido-flotante {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 100;
+    transition: transform 0.2s ease;
+}
+
+.btn-sonido-flotante img {
+    width: 55px;
+    height: auto;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
+}
+
+.btn-sonido-flotante:hover {
+    transform: scale(1.1);
+}
+
+/* Encabezados superiores */
+.header .logo {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+.banner .banner-img {
+    height: 75px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Escena Central Horizontal */
+.escena {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* Osito lateral */
+.personaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+/* Animación del globo de diálogo del Oso */
+.personaje .globo {
+    width: 180px;
+    height: auto;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.personaje .globo.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.personaje .oso {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Contenedor de Etapas */
+.etapas-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    flex-wrap: nowrap;
+}
+
+/* Tarjetas transparentes */
+.card-etapa {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card-etapa img {
+    height: 280px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.15));
+}
+
+.card-etapa:hover {
+    transform: translateY(-8px) scale(1.04);
+}
+
+.card-etapa:active,
+/* Estado agrandado mientras habla */
+.card-etapa.agrandada {
+    transform: translateY(-12px) scale(1.18) !important;
+    filter: drop-shadow(0px 12px 22px rgba(0, 0, 0, 0.35));
+    z-index: 10;
+}
+
+/* Flechas entre tarjetas */
+.flecha-naranja {
+    font-size: 2.2rem;
+    color: #e67e22;
+    font-weight: 900;
+    align-self: flex-start;
+    margin-top: 15px;
+    user-select: none;
+    text-shadow: 1px 1px 0px #b85d0d;
+}
+
+/* Footer Inferior */
+.footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.globo-footer {
+    height: 60px;
+    width: auto;
+}
+
+/* Posiciona el botón ¡A Jugar! fijado a la derecha */
+.btn-jugar {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+}
+
+.btn-jugar img {
+    height: 60px;
+    width: auto;
+    transition: transform 0.2s ease;
+}
+
+.btn-jugar:hover {
+    transform: scale(1.06);
+}
+/* Control de visibilidad de los íconos de sonido */
+.icono-audio.oculta {
+    display: none !important;
+}

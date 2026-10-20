@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cómo funciona?</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/explicacion-que-comen.css">
+</head>
+<body>
+
+    <!-- Botón Menú Verde Superior Izquierdo -->
+    <a href="intro-animales.html" class="btn-menu-verde" title="Volver al Menú">
+        <span>🏠 Menú</span>
+    </a>
+
+    <!-- Botón de Sonido Flotante Superior Derecho -->
+    <button id="btn-audio-top" class="btn-sonido-flotante" title="Controlar audio">
+        <img src="../img/Sonido.png" alt="Sonido activado" id="img-audio-on" class="icono-audio">
+        <img src="../img/Sonido desactivado .png" alt="Sonido desactivado" id="img-audio-off" class="icono-audio oculto">
+    </button>
+
+    <!-- Header / Imagen de Título "¿Cómo funciona?" -->
+    <header class="header-banner">
+        <!-- Reemplaza el nombre de la imagen si la tienes guardada con otro nombre -->
+        <img src="../img/comofuncionacomen/¿Como funciona -.png" alt="¿Cómo funciona?" class="banner-titulo">
+    </header>
+
+    <!-- Escena Principal -->
+    <main class="escena-explicacion">
+        
+        <!-- Osito Nico -->
+        <div class="contenedor-nico">
+            <img src="../img/Explorador .png" alt="Osito Nico" id="nico-oso" class="nico-img">
+        </div>
+
+        <!-- Tarjeta de Pasos -->
+        <div class="tarjeta-instrucciones">
+            
+            <div class="paso-item">
+                <div class="numero-circulo num-1">1</div>
+                <p>Observa el animal que aparece.</p>
+            </div>
+
+            <div class="paso-item">
+                <div class="numero-circulo num-2">2</div>
+                <p>Elige el tipo de alimentación que crees q tiene.</p>
+            </div>
+
+            <div class="paso-item">
+                <div class="numero-circulo num-3">3</div>
+                <p>Si aciertas, ¡muy bien ! Si no, intenta de nuevo</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Botón Continuar -->
+    <footer class="footer-accion">
+        <a href="actividad-que-comen.html" class="btn-continuar">
+            <span>Continuar</span> ➡️
+        </a>
+    </footer>
+
+    <!-- AUDIO DE NICO EXPLICANDO -->
+    <audio id="audio-nico" src="../audios/animales/explicaactividadqcomer.mp3"></audio>
+
+    <script src="../js/explicacion-que-comen.js" defer></script>
+</body>
+</html>

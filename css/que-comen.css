@@ -1,0 +1,104 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: url("../img/Fondo\ del\ login\ .png") no-repeat center center / cover;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+}
+
+/* Botón Menú Verde Superior Izquierdo */
+.btn-menu-verde {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ffffff;
+    border: 4px solid #73bf43;
+    padding: 6px 20px 6px 12px;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.btn-menu-verde span {
+    color: #4a2c11;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.btn-menu-verde:hover {
+    transform: scale(1.08);
+}
+
+/* Contenedor Principal Centrado */
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+/* Contenedor / Marco del Video de YouTube */
+.video-container {
+    width: 720px;
+    height: 405px;
+    background-color: #ffffff;
+    border: 8px solid #73bf43;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Botón Verde ¡A jugar! */
+.btn-a-jugar {
+    background-color: #2e7d32;
+    color: #ffffff;
+    border: 4px solid #1b5e20;
+    padding: 10px 35px;
+    font-size: 26px;
+    font-weight: 700;
+    border-radius: 40px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-a-jugar:hover {
+    transform: scale(1.08);
+    background-color: #388e3c;
+}
+
+.oculto {
+    display: none !important;
+}

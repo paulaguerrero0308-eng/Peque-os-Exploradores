@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/actividad-ciclo.css">
+</head>
+<body>
+
+    <!-- Botón Volver al Menú -->
+    <a href="intro-plantas.html" class="btn-menu-verde" title="Volver al menú">
+        <span>🏠 Menú</span>
+    </a>
+
+    <!-- Botón Flecha Siguiente / Continuar -->
+    <a href="intro-plantas.html" class="btn-flecha-madera" id="btn-siguiente" title="Siguiente">
+        <img src="../img/siguiente.png" alt="Siguiente">
+    </a>
+
+    <!-- Banner Superior -->
+    <header class="header-banner">
+        <img src="../img/actividad 2 seres vivos/A jugar .png" alt="¡A jugar!" class="banner-titulo">
+    </header>
+
+    <!-- Escena Principal -->
+    <main class="escena-actividad">
+
+        <!-- Personaje Nico y Globo -->
+        <div class="columna-nico">
+            <div class="globo-nico">
+                <!-- Botón de Audio en el globo -->
+                <button id="btn-audio-top" class="btn-sonido-flotante" type="button" title="Escuchar instrucción">
+                    <img src="../img/Sonido.png" alt="Sonido activo" id="img-audio-on" class="icono-audio">
+                    <img src="../img/Sonido desactivado .png" alt="Sin sonido" id="img-audio-off" class="icono-audio oculto">
+                </button>
+
+                <img src="../img/actividadciclo/Mensaje - Que etapa sigue .png" alt="¿Qué etapa sigue?" class="img-globo-nico">
+            </div>
+
+            <div class="personaje-oso">
+                <img src="../img/Explorador .png" alt="Nico Explorador" id="oso-nico" class="oso-img">
+            </div>
+        </div>
+
+        <!-- Zona del Juego -->
+        <div class="contenedor-juego">
+
+            <!-- Secuencia Superior (3 casillas renderizadas dinámicamente desde JS) -->
+            <div class="secuencia-etapas"></div>
+
+            <!-- Opciones de Respuesta Inferiores (Renderizadas dinámicamente desde JS) -->
+            <div class="opciones-respuesta"></div>
+
+        </div>
+
+    </main>
+
+    <!-- BANCO DE AUDIOS -->
+    <!-- Verifica minuciosamente que las rutas y extensiones de estos archivos sean exactas -->
+    <audio id="audio-instruccion" src="../audios/plantas/qetapasigue.mp3" preload="auto"></audio>
+    <audio id="audio-pop" src="../audios/pop seres vivos.mp3" preload="auto"></audio>
+    <audio id="audio-correcto" src="../audios/felicidadesactividad1.mp3" preload="auto"></audio>
+    <audio id="audio-incorrecto" src="../audios/incorrecto.mp3" preload="auto"></audio>
+
+    <script src="../js/actividad-ciclo.js" defer></script>
+</body>
+</html>

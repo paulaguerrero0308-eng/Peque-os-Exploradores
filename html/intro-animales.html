@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pequeños Exploradores</title>
+    <link rel="icon" type="image/x-icon" href="../img/Isotipo .png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/intro-animales.css">
+</head>
+<body>
+
+    <!-- Botón Volver al Menú Principal (Esquina Superior Izquierda) -->
+    <a href="menu.html" class="btn-menu-verde" title="Volver al menú">
+        <span>🏠Menú</span>
+    </a>
+
+    <!-- Botón de Sonido Flotante (Esquina Superior Derecha) -->
+    <button id="btn-audio-top" class="btn-sonido-flotante" title="Controlar audio">
+        <img src="../img/Sonido.png" alt="Sonido activado" id="img-audio-on" class="icono-audio">
+        <img src="../img/Sonido desactivado .png" alt="Sonido desactivado" id="img-audio-off" class="icono-audio oculto">
+    </button>
+
+    <!-- Header / Título Banner Madera -->
+    <header class="header-banner">
+        <img src="../img/introanimales/Titulo - animales .png" alt="Animales" class="banner-titulo">
+    </header>
+
+    <!-- Escena Principal -->
+    <main class="escena-animales">
+
+        <!-- Personaje Nico a la Izquierda -->
+        <div class="columna-nico">
+            <img src="../img/Explorador .png" alt="Nico Explorador" id="oso-nico" class="oso-img">
+        </div>
+
+        <!-- Tarjetas de Navegación del Módulo -->
+        <nav class="contenedor-tarjetas">
+
+            <!-- 1. ¿Cómo se mueven? -->
+            <a href="como-se-mueven.html" class="tarjeta-modulo">
+                <img src="../img/introanimales/tarjeta - como se mueven .png" alt="¿Cómo se mueven?">
+            </a>
+
+            <!-- 2. ¿Qué comen? -->
+            <a href="que-comen.html" class="tarjeta-modulo">
+                <img src="../img/introanimales/Tarjeta - que comen .png" alt="¿Qué comen?">
+            </a>
+
+            <!-- 3. ¿Dónde viven? -->
+            <a href="donde-viven.html" class="tarjeta-modulo">
+                <img src="../img/introanimales/Tarjeta - donde vive.png" alt="¿Dónde viven?">
+            </a>
+
+        </nav>
+
+    </main>
+
+    <!-- BANCO DE AUDIOS -->
+    <audio id="audio-bienvenida" src="../audios/animales/bienvenidaanimales.mp3"></audio>
+    <audio id="audio-pop" src="../audios/pop seres vivos .mp3"></audio>
+
+    <script src="../js/intro-animales.js" defer></script>
+</body>
+</html>
